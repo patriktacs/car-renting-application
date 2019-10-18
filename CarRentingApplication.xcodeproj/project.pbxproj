@@ -11,12 +11,12 @@
 		95A8BFBFFA83262DA1773419 /* Pods_CarRentingApplicationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 637C956E165538DA8D595CEF /* Pods_CarRentingApplicationUITests.framework */; };
 		D82D40942E2024DD5BB78541 /* Pods_CarRentingApplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72E81AB3E2C66AE7851AD26E /* Pods_CarRentingApplication.framework */; };
 		DBB7C8AE23535DF900DEBBB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB7C8AD23535DF900DEBBB3 /* AppDelegate.swift */; };
-		DBB7C8B023535DF900DEBBB3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB7C8AF23535DF900DEBBB3 /* ViewController.swift */; };
 		DBB7C8B323535DF900DEBBB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBB7C8B123535DF900DEBBB3 /* Main.storyboard */; };
 		DBB7C8B523535E0400DEBBB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBB7C8B423535E0400DEBBB3 /* Assets.xcassets */; };
 		DBB7C8B823535E0400DEBBB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBB7C8B623535E0400DEBBB3 /* LaunchScreen.storyboard */; };
 		DBB7C8C323535E0500DEBBB3 /* CarRentingApplicationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB7C8C223535E0500DEBBB3 /* CarRentingApplicationTests.swift */; };
 		DBB7C8CE23535E0500DEBBB3 /* CarRentingApplicationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB7C8CD23535E0500DEBBB3 /* CarRentingApplicationUITests.swift */; };
+		DBDA05A82359D576005026DF /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = DBDA05A72359D576005026DF /* Podfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +47,6 @@
 		7921D214BE8E6AACFB6E20C4 /* Pods-CarRentingApplication.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarRentingApplication.release.xcconfig"; path = "Target Support Files/Pods-CarRentingApplication/Pods-CarRentingApplication.release.xcconfig"; sourceTree = "<group>"; };
 		DBB7C8AA23535DF900DEBBB3 /* CarRentingApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarRentingApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBB7C8AD23535DF900DEBBB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DBB7C8AF23535DF900DEBBB3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DBB7C8B223535DF900DEBBB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DBB7C8B423535E0400DEBBB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBB7C8B723535E0400DEBBB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,6 +57,7 @@
 		DBB7C8C923535E0500DEBBB3 /* CarRentingApplicationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarRentingApplicationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBB7C8CD23535E0500DEBBB3 /* CarRentingApplicationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRentingApplicationUITests.swift; sourceTree = "<group>"; };
 		DBB7C8CF23535E0500DEBBB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBDA05A72359D576005026DF /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
 		E8BE7B9E0F54D772A1C41398 /* Pods_CarRentingApplicationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarRentingApplicationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -109,13 +109,13 @@
 				41E314050E539657E3BC0F90 /* Pods-CarRentingApplicationUITests.debug.xcconfig */,
 				5B03F00AF221462FB607A98F /* Pods-CarRentingApplicationUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		DBB7C8A123535DF900DEBBB3 = {
 			isa = PBXGroup;
 			children = (
+				DBDA05A72359D576005026DF /* Podfile */,
 				DBB7C8AC23535DF900DEBBB3 /* CarRentingApplication */,
 				DBB7C8C123535E0500DEBBB3 /* CarRentingApplicationTests */,
 				DBB7C8CC23535E0500DEBBB3 /* CarRentingApplicationUITests */,
@@ -138,11 +138,8 @@
 		DBB7C8AC23535DF900DEBBB3 /* CarRentingApplication */ = {
 			isa = PBXGroup;
 			children = (
-				DBB7C8AD23535DF900DEBBB3 /* AppDelegate.swift */,
-				DBB7C8AF23535DF900DEBBB3 /* ViewController.swift */,
-				DBB7C8B123535DF900DEBBB3 /* Main.storyboard */,
-				DBB7C8B423535E0400DEBBB3 /* Assets.xcassets */,
-				DBB7C8B623535E0400DEBBB3 /* LaunchScreen.storyboard */,
+				DBDA05A62359D525005026DF /* Storyboard */,
+				DBDA05A52359D515005026DF /* Supporting Files */,
 				DBB7C8B923535E0400DEBBB3 /* Info.plist */,
 			);
 			path = CarRentingApplication;
@@ -166,6 +163,24 @@
 			path = CarRentingApplicationUITests;
 			sourceTree = "<group>";
 		};
+		DBDA05A52359D515005026DF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DBB7C8AD23535DF900DEBBB3 /* AppDelegate.swift */,
+				DBB7C8B423535E0400DEBBB3 /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DBDA05A62359D525005026DF /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				DBB7C8B123535DF900DEBBB3 /* Main.storyboard */,
+				DBB7C8B623535E0400DEBBB3 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -177,6 +192,7 @@
 				DBB7C8A623535DF900DEBBB3 /* Sources */,
 				DBB7C8A723535DF900DEBBB3 /* Frameworks */,
 				DBB7C8A823535DF900DEBBB3 /* Resources */,
+				E98A57A73048A560557B2DAE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -275,6 +291,7 @@
 			files = (
 				DBB7C8B823535E0400DEBBB3 /* LaunchScreen.storyboard in Resources */,
 				DBB7C8B523535E0400DEBBB3 /* Assets.xcassets in Resources */,
+				DBDA05A82359D576005026DF /* Podfile in Resources */,
 				DBB7C8B323535DF900DEBBB3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,6 +379,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E98A57A73048A560557B2DAE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CarRentingApplication/Pods-CarRentingApplication-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CarRentingApplication/Pods-CarRentingApplication-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CarRentingApplication/Pods-CarRentingApplication-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -369,7 +403,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBB7C8B023535DF900DEBBB3 /* ViewController.swift in Sources */,
 				DBB7C8AE23535DF900DEBBB3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
