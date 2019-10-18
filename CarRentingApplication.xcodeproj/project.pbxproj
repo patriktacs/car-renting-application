@@ -20,6 +20,7 @@
 		DBDA05AB2359D8D6005026DF /* ViewAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDA05AA2359D8D6005026DF /* ViewAssembly.swift */; };
 		DBDA05AF2359D94F005026DF /* NetworkAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDA05AE2359D94F005026DF /* NetworkAssembly.swift */; };
 		DBDA05B12359D9A0005026DF /* InteractorAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDA05B02359D9A0005026DF /* InteractorAssembly.swift */; };
+		DBDA05B4235A06AE005026DF /* MultiMoyaProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDA05B3235A06AE005026DF /* MultiMoyaProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		DBDA05AA2359D8D6005026DF /* ViewAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAssembly.swift; sourceTree = "<group>"; };
 		DBDA05AE2359D94F005026DF /* NetworkAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAssembly.swift; sourceTree = "<group>"; };
 		DBDA05B02359D9A0005026DF /* InteractorAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorAssembly.swift; sourceTree = "<group>"; };
+		DBDA05B3235A06AE005026DF /* MultiMoyaProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiMoyaProvider.swift; sourceTree = "<group>"; };
 		DF12C5B24BC4F3A5584E28B2 /* Pods_CarRentingApplication.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarRentingApplication.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -145,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				DBDA05A92359D7E2005026DF /* Assembly */,
+				DBDA05B2235A0696005026DF /* Network */,
 				DBDA05A62359D525005026DF /* Storyboard */,
 				DBDA05A52359D515005026DF /* Supporting Files */,
 				DBB7C8AD23535DF900DEBBB3 /* AppDelegate.swift */,
@@ -196,6 +199,14 @@
 				DBDA05AA2359D8D6005026DF /* ViewAssembly.swift */,
 			);
 			path = Assembly;
+			sourceTree = "<group>";
+		};
+		DBDA05B2235A0696005026DF /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				DBDA05B3235A06AE005026DF /* MultiMoyaProvider.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -422,6 +433,7 @@
 			files = (
 				DBDA05AB2359D8D6005026DF /* ViewAssembly.swift in Sources */,
 				DBB7C8AE23535DF900DEBBB3 /* AppDelegate.swift in Sources */,
+				DBDA05B4235A06AE005026DF /* MultiMoyaProvider.swift in Sources */,
 				DBDA05B12359D9A0005026DF /* InteractorAssembly.swift in Sources */,
 				DBDA05AF2359D94F005026DF /* NetworkAssembly.swift in Sources */,
 			);
