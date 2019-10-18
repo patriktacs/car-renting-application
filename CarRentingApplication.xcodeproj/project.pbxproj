@@ -60,7 +60,7 @@
 		DBB7C8C923535E0500DEBBB3 /* CarRentingApplicationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarRentingApplicationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBB7C8CD23535E0500DEBBB3 /* CarRentingApplicationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRentingApplicationUITests.swift; sourceTree = "<group>"; };
 		DBB7C8CF23535E0500DEBBB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DBDA05A72359D576005026DF /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		DBDA05A72359D576005026DF /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		DBDA05AA2359D8D6005026DF /* ViewAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAssembly.swift; sourceTree = "<group>"; };
 		DBDA05AE2359D94F005026DF /* NetworkAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAssembly.swift; sourceTree = "<group>"; };
 		DBDA05B02359D9A0005026DF /* InteractorAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorAssembly.swift; sourceTree = "<group>"; };

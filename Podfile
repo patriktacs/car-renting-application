@@ -10,6 +10,10 @@ target 'CarRentingApplication' do
   # Dependency injection
     pod 'Swinject'
     pod 'SwinjectStoryboard'
+    
+  # Network
+    pod 'Moya', '~> 13.0'
+    pod 'Moya/RxSwift', '~> 13.0'
 
   target 'CarRentingApplicationTests' do
     inherit! :search_paths
