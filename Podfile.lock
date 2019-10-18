@@ -9,14 +9,18 @@ PODS:
     - Moya/Core
     - RxSwift (~> 4.0)
   - Result (4.1.0)
+  - RxCocoa (4.5.0):
+    - RxSwift (>= 4.4.2, ~> 4.4)
   - RxSwift (4.5.0)
   - Swinject (2.7.1)
   - SwinjectStoryboard (2.2.0):
     - Swinject (~> 2.6)
 
 DEPENDENCIES:
-  - Moya (~> 13.0)
-  - Moya/RxSwift (~> 13.0)
+  - Moya
+  - Moya/RxSwift
+  - RxCocoa
+  - RxSwift
   - Swinject
   - SwinjectStoryboard
 
@@ -25,6 +29,7 @@ SPEC REPOS:
     - Alamofire
     - Moya
     - Result
+    - RxCocoa
     - RxSwift
     - Swinject
     - SwinjectStoryboard
@@ -33,10 +38,11 @@ SPEC CHECKSUMS:
   Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
   Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
   SwinjectStoryboard: 32512ef16c2b0ff5b8f823b23539c4a50f6d3383
 
-PODFILE CHECKSUM: 95ed42c50df67e0badc9c97a626f9585b0ef0e20
+PODFILE CHECKSUM: 54eaaa2580f57b726d7c30feb58c91e44310a744
 
 COCOAPODS: 1.7.5

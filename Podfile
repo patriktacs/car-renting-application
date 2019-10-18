@@ -12,8 +12,12 @@ target 'CarRentingApplication' do
     pod 'SwinjectStoryboard'
     
   # Network
-    pod 'Moya', '~> 13.0'
-    pod 'Moya/RxSwift', '~> 13.0'
+    pod 'Moya'
+    pod 'Moya/RxSwift'
+    
+  # Rx
+    pod 'RxSwift'
+    pod 'RxCocoa'
 
   target 'CarRentingApplicationTests' do
     inherit! :search_paths
