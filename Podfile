@@ -7,6 +7,10 @@ target 'CarRentingApplication' do
 
   # Pods for CarRentingApplication
 
+  # Dependency injection
+    pod 'Swinject'
+    pod 'SwinjectStoryboard'
+
   target 'CarRentingApplicationTests' do
     inherit! :search_paths
     # Pods for testing
