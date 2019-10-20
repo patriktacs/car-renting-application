@@ -8,17 +8,17 @@ target 'CarRentingApplication' do
   # Pods for CarRentingApplication
 
   # Dependency injection
-    pod 'Swinject'
-    pod 'SwinjectStoryboard'
-    pod 'SwinjectAutoregistration'
+    pod 'Swinject', '2.6.2'
+    pod 'SwinjectAutoregistration', '2.6.0'
+    pod 'SwinjectStoryboard', '2.2.0'
     
   # Network
-    pod 'Moya'
-    pod 'Moya/RxSwift'
+    pod 'Moya/RxSwift', '13.0.1'
     
   # Rx
-    pod 'RxSwift'
-    pod 'RxCocoa'
+    pod 'RxSwift', '4.5.0'
+    pod 'RxBiBinding', '0.1.8'
+    pod 'NSObject+Rx', '4.4.1'
 
   target 'CarRentingApplicationTests' do
     inherit! :search_paths

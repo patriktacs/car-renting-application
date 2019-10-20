@@ -12,6 +12,7 @@ import SwinjectAutoregistration
 
 class PersistencyAssembly: Assembly {
     func assemble(container: Container) {
-        container.autoregister(PersistingManager.self, initializer: PersistencyManager.init)
+        container.autoregister(PersistingManager.self, initializer: PersistencyManager.init).inObjectScope(.container)
+        container.autoregister(SessioningManager.self, initializer: SessionManager.init).inObjectScope(.container)
     }
 }

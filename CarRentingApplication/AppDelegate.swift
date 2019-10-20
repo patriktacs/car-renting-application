@@ -12,6 +12,8 @@ import UIKit
 import Swinject
 import SwinjectStoryboard
 
+import NSObject_Rx
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -28,11 +30,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }()
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions:
+        [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        Container.loggingFunction = nil
+        
         let assembler = Assembler.init(container: container)
         assembler.apply(assemblies: assemblies)
         
+        let asd = container.resolve(NetworkingConfig.self)!
+        
         SwinjectStoryboard.defaultContainer = container
+        
+        let dashBoardStoryboard = UIStoryboard(name: "Login", bundle: nil)
+        if let loginMainController = dashBoardStoryboard.instantiateInitialViewController() {
+            self.window?.rootViewController = loginMainController
+        }
         
         return true
     }
