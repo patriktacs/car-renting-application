@@ -38,13 +38,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let assembler = Assembler.init(container: container)
         assembler.apply(assemblies: assemblies)
         
-        let asd = container.resolve(NetworkingConfig.self)!
-        
         SwinjectStoryboard.defaultContainer = container
         
-        let dashBoardStoryboard = UIStoryboard(name: "Login", bundle: nil)
-        if let loginMainController = dashBoardStoryboard.instantiateInitialViewController() {
-            self.window?.rootViewController = loginMainController
+        let sessionManager = container.resolve(SessioningManager.self)!
+        
+        if !sessionManager.sessionStatus {
+            let loginStoryboard = UIStoryboard(name: "Login", bundle: nil)
+            if let loginMainController = loginStoryboard.instantiateInitialViewController() {
+                self.window?.rootViewController = loginMainController
+            }
+        } else {
+            let dashboardStoryboard = UIStoryboard(name: "Dashboard", bundle: nil)
+            if let dashboardMainController = dashboardStoryboard.instantiateInitialViewController() {
+                self.window?.rootViewController = dashboardMainController
+            }
         }
         
         return true

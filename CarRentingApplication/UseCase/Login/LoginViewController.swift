@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import RxBiBinding
+import Moya
 
 class LoginViewController: UIViewController, Notifiable {
     
@@ -27,11 +28,19 @@ class LoginViewController: UIViewController, Notifiable {
     }
     
     @IBAction func loginButton(_ sender: Any) {
-        viewModel.login().subscribe(onSuccess: { _ in
-            
-        }, onError: { _ in
-            self.showNotification("Login error", "Wrong username or password")
-        }).disposed(by: rx.disposeBag)
+        viewModel.login()
+            .subscribe(onSuccess: { _ in
+                let dashboardStoryboard = UIStoryboard(name: "Dashboard", bundle: nil)
+                if let dashboardMainController = dashboardStoryboard.instantiateInitialViewController() {
+                    self.present(dashboardMainController, animated: true, completion: nil)
+                }
+            }, onError: { error in
+                guard let moyaError = error as? MoyaError else {
+                    return
+                }
+                
+                self.showNotification("Login error", "Error " + String(moyaError.response!.statusCode))
+            }).disposed(by: rx.disposeBag)
     }
     
 }

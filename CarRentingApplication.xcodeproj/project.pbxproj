@@ -11,6 +11,7 @@
 		6220A9A9343D49040DB25E09 /* Pods_CarRentingApplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF12C5B24BC4F3A5584E28B2 /* Pods_CarRentingApplication.framework */; };
 		64472B079289792D6A56939A /* Pods_CarRentingApplicationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4107FB72968E0B5732C1FD6E /* Pods_CarRentingApplicationTests.framework */; };
 		DB0A5EF2235CE8D300DB0225 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB0A5EF1235CE8D300DB0225 /* Login.storyboard */; };
+		DB9B128C235D00FE005F8F0A /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB9B128B235D00FE005F8F0A /* Dashboard.storyboard */; };
 		DBB7C8AE23535DF900DEBBB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB7C8AD23535DF900DEBBB3 /* AppDelegate.swift */; };
 		DBB7C8B523535E0400DEBBB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBB7C8B423535E0400DEBBB3 /* Assets.xcassets */; };
 		DBB7C8B823535E0400DEBBB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBB7C8B623535E0400DEBBB3 /* LaunchScreen.storyboard */; };
@@ -59,6 +60,7 @@
 		854288F8D462A25E8652599B /* Pods-CarRentingApplicationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarRentingApplicationTests.release.xcconfig"; path = "Target Support Files/Pods-CarRentingApplicationTests/Pods-CarRentingApplicationTests.release.xcconfig"; sourceTree = "<group>"; };
 		AB9613935A635E0CE2C069C0 /* Pods_CarRentingApplicationUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarRentingApplicationUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB0A5EF1235CE8D300DB0225 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		DB9B128B235D00FE005F8F0A /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		DBB7C8AA23535DF900DEBBB3 /* CarRentingApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarRentingApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBB7C8AD23535DF900DEBBB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBB7C8B423535E0400DEBBB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 			children = (
 				DB0A5EF1235CE8D300DB0225 /* Login.storyboard */,
 				DBB7C8B623535E0400DEBBB3 /* LaunchScreen.storyboard */,
+				DB9B128B235D00FE005F8F0A /* Dashboard.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 				DBB7C8B823535E0400DEBBB3 /* LaunchScreen.storyboard in Resources */,
 				DBB7C8B523535E0400DEBBB3 /* Assets.xcassets in Resources */,
 				DB0A5EF2235CE8D300DB0225 /* Login.storyboard in Resources */,
+				DB9B128C235D00FE005F8F0A /* Dashboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

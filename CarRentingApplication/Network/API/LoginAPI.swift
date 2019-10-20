@@ -24,7 +24,7 @@ extension LoginAPI: TargetType {
     var path: String {
         switch self {
         case .login:
-            return "/login/costumer"
+            return "/login/customer"
         }
         
     }
@@ -32,7 +32,7 @@ extension LoginAPI: TargetType {
     var method: Moya.Method {
         switch self {
         case .login:
-            return .post
+            return .get
         }
     }
     
@@ -41,17 +41,16 @@ extension LoginAPI: TargetType {
     }
     
     var task: Task {
-        switch self {
-        case .login:
-            return .requestPlain
-        }
+        return .requestPlain
     }
     
     var headers: [String : String]? {
         switch self {
         case .login(let username, let password):
-            return ["Authorization": username + " " + password]
+            let token = Data((username + ":" + password).utf8).base64EncodedString()
+            return ["Authorization": "Basic " + token]
         }
+        
     }
     
     

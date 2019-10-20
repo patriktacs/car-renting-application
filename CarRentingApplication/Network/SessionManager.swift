@@ -59,13 +59,16 @@ class SessionManager: SessioningManager {
     func killSession() {
         persistencyManager.removeData(forKey: usernameKey)
         persistencyManager.removeData(forKey: passwordKey)
-        persistencyManager.removeData(forKey: sessionStatusKey)
+        persistencyManager.setData(set: false, forKey: sessionStatusKey)
     }
     
     func login() -> Single<Response> {
         return networkManager.provider.rx.request(MultiTarget(LoginAPI.login(username: (usernameRelay.value ?? ""), password: (passwordRelay.value ?? ""))))
+            .filterSuccessfulStatusCodes()
             .do(onSuccess: { _ in
                 self.setupSession()
+            }, onError: { _ in
+                self.killSession()
             })
     }
 }
