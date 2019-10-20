@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1FCDC97BDBCDFFC0F742759F /* Pods_CarRentingApplicationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8BE7B9E0F54D772A1C41398 /* Pods_CarRentingApplicationTests.framework */; };
-		95A8BFBFFA83262DA1773419 /* Pods_CarRentingApplicationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 637C956E165538DA8D595CEF /* Pods_CarRentingApplicationUITests.framework */; };
-		D82D40942E2024DD5BB78541 /* Pods_CarRentingApplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72E81AB3E2C66AE7851AD26E /* Pods_CarRentingApplication.framework */; };
+		403574BFC242BD6DFB2195D8 /* Pods_CarRentingApplicationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB9613935A635E0CE2C069C0 /* Pods_CarRentingApplicationUITests.framework */; };
+		6220A9A9343D49040DB25E09 /* Pods_CarRentingApplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF12C5B24BC4F3A5584E28B2 /* Pods_CarRentingApplication.framework */; };
+		64472B079289792D6A56939A /* Pods_CarRentingApplicationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4107FB72968E0B5732C1FD6E /* Pods_CarRentingApplicationTests.framework */; };
 		DBB7C8AE23535DF900DEBBB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB7C8AD23535DF900DEBBB3 /* AppDelegate.swift */; };
 		DBB7C8B323535DF900DEBBB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBB7C8B123535DF900DEBBB3 /* Main.storyboard */; };
 		DBB7C8B523535E0400DEBBB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBB7C8B423535E0400DEBBB3 /* Assets.xcassets */; };
@@ -20,6 +20,10 @@
 		DBDA05AB2359D8D6005026DF /* ViewAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDA05AA2359D8D6005026DF /* ViewAssembly.swift */; };
 		DBDA05AF2359D94F005026DF /* NetworkAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDA05AE2359D94F005026DF /* NetworkAssembly.swift */; };
 		DBDA05B12359D9A0005026DF /* InteractorAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDA05B02359D9A0005026DF /* InteractorAssembly.swift */; };
+		DBDA05B4235A06AE005026DF /* MultiMoyaProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDA05B3235A06AE005026DF /* MultiMoyaProvider.swift */; };
+		DBEC208C235C8D8F0085BEAB /* MultiMoyaProvider+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEC208B235C8D8F0085BEAB /* MultiMoyaProvider+Codable.swift */; };
+		DBEC208E235C8E9B0085BEAB /* NetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEC208D235C8E9B0085BEAB /* NetworkConfig.swift */; };
+		DBEC2090235C92CB0085BEAB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEC208F235C92CB0085BEAB /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,14 +44,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		14A2FC6374B950BD10394F60 /* Pods-CarRentingApplicationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarRentingApplicationTests.debug.xcconfig"; path = "Target Support Files/Pods-CarRentingApplicationTests/Pods-CarRentingApplicationTests.debug.xcconfig"; sourceTree = "<group>"; };
-		41E314050E539657E3BC0F90 /* Pods-CarRentingApplicationUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarRentingApplicationUITests.debug.xcconfig"; path = "Target Support Files/Pods-CarRentingApplicationUITests/Pods-CarRentingApplicationUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		522727D65770812A89FA8203 /* Pods-CarRentingApplicationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarRentingApplicationTests.release.xcconfig"; path = "Target Support Files/Pods-CarRentingApplicationTests/Pods-CarRentingApplicationTests.release.xcconfig"; sourceTree = "<group>"; };
-		5B03F00AF221462FB607A98F /* Pods-CarRentingApplicationUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarRentingApplicationUITests.release.xcconfig"; path = "Target Support Files/Pods-CarRentingApplicationUITests/Pods-CarRentingApplicationUITests.release.xcconfig"; sourceTree = "<group>"; };
-		637C956E165538DA8D595CEF /* Pods_CarRentingApplicationUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarRentingApplicationUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6C5A18E86484BD24BCE0066A /* Pods-CarRentingApplication.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarRentingApplication.debug.xcconfig"; path = "Target Support Files/Pods-CarRentingApplication/Pods-CarRentingApplication.debug.xcconfig"; sourceTree = "<group>"; };
-		72E81AB3E2C66AE7851AD26E /* Pods_CarRentingApplication.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarRentingApplication.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7921D214BE8E6AACFB6E20C4 /* Pods-CarRentingApplication.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarRentingApplication.release.xcconfig"; path = "Target Support Files/Pods-CarRentingApplication/Pods-CarRentingApplication.release.xcconfig"; sourceTree = "<group>"; };
+		08D54771CA42D61E7D8B37FD /* Pods-CarRentingApplication.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarRentingApplication.release.xcconfig"; path = "Target Support Files/Pods-CarRentingApplication/Pods-CarRentingApplication.release.xcconfig"; sourceTree = "<group>"; };
+		162D533E821918827901E491 /* Pods-CarRentingApplication.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarRentingApplication.debug.xcconfig"; path = "Target Support Files/Pods-CarRentingApplication/Pods-CarRentingApplication.debug.xcconfig"; sourceTree = "<group>"; };
+		2C84FC2F9AC98145514C0410 /* Pods-CarRentingApplicationUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarRentingApplicationUITests.debug.xcconfig"; path = "Target Support Files/Pods-CarRentingApplicationUITests/Pods-CarRentingApplicationUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4107FB72968E0B5732C1FD6E /* Pods_CarRentingApplicationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarRentingApplicationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A1D6DDC138037A05E05EA5E /* Pods-CarRentingApplicationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarRentingApplicationTests.debug.xcconfig"; path = "Target Support Files/Pods-CarRentingApplicationTests/Pods-CarRentingApplicationTests.debug.xcconfig"; sourceTree = "<group>"; };
+		50982ECA4E9176B1E1805308 /* Pods-CarRentingApplicationUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarRentingApplicationUITests.release.xcconfig"; path = "Target Support Files/Pods-CarRentingApplicationUITests/Pods-CarRentingApplicationUITests.release.xcconfig"; sourceTree = "<group>"; };
+		854288F8D462A25E8652599B /* Pods-CarRentingApplicationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarRentingApplicationTests.release.xcconfig"; path = "Target Support Files/Pods-CarRentingApplicationTests/Pods-CarRentingApplicationTests.release.xcconfig"; sourceTree = "<group>"; };
+		AB9613935A635E0CE2C069C0 /* Pods_CarRentingApplicationUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarRentingApplicationUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBB7C8AA23535DF900DEBBB3 /* CarRentingApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarRentingApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBB7C8AD23535DF900DEBBB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBB7C8B223535DF900DEBBB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -60,11 +64,15 @@
 		DBB7C8C923535E0500DEBBB3 /* CarRentingApplicationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarRentingApplicationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBB7C8CD23535E0500DEBBB3 /* CarRentingApplicationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRentingApplicationUITests.swift; sourceTree = "<group>"; };
 		DBB7C8CF23535E0500DEBBB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DBDA05A72359D576005026DF /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		DBDA05A72359D576005026DF /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		DBDA05AA2359D8D6005026DF /* ViewAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAssembly.swift; sourceTree = "<group>"; };
 		DBDA05AE2359D94F005026DF /* NetworkAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAssembly.swift; sourceTree = "<group>"; };
 		DBDA05B02359D9A0005026DF /* InteractorAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorAssembly.swift; sourceTree = "<group>"; };
-		E8BE7B9E0F54D772A1C41398 /* Pods_CarRentingApplicationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarRentingApplicationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBDA05B3235A06AE005026DF /* MultiMoyaProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiMoyaProvider.swift; sourceTree = "<group>"; };
+		DBEC208B235C8D8F0085BEAB /* MultiMoyaProvider+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MultiMoyaProvider+Codable.swift"; sourceTree = "<group>"; };
+		DBEC208D235C8E9B0085BEAB /* NetworkConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfig.swift; sourceTree = "<group>"; };
+		DBEC208F235C92CB0085BEAB /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		DF12C5B24BC4F3A5584E28B2 /* Pods_CarRentingApplication.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarRentingApplication.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D82D40942E2024DD5BB78541 /* Pods_CarRentingApplication.framework in Frameworks */,
+				6220A9A9343D49040DB25E09 /* Pods_CarRentingApplication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,7 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FCDC97BDBCDFFC0F742759F /* Pods_CarRentingApplicationTests.framework in Frameworks */,
+				64472B079289792D6A56939A /* Pods_CarRentingApplicationTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,19 +96,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95A8BFBFFA83262DA1773419 /* Pods_CarRentingApplicationUITests.framework in Frameworks */,
+				403574BFC242BD6DFB2195D8 /* Pods_CarRentingApplicationUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5C205B693683F096231368D7 /* Frameworks */ = {
+		A3CDA45057DBF34467C602AB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				72E81AB3E2C66AE7851AD26E /* Pods_CarRentingApplication.framework */,
-				E8BE7B9E0F54D772A1C41398 /* Pods_CarRentingApplicationTests.framework */,
-				637C956E165538DA8D595CEF /* Pods_CarRentingApplicationUITests.framework */,
+				DF12C5B24BC4F3A5584E28B2 /* Pods_CarRentingApplication.framework */,
+				4107FB72968E0B5732C1FD6E /* Pods_CarRentingApplicationTests.framework */,
+				AB9613935A635E0CE2C069C0 /* Pods_CarRentingApplicationUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -108,12 +116,12 @@
 		C2B89EB5104D1865EA2C3CFE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6C5A18E86484BD24BCE0066A /* Pods-CarRentingApplication.debug.xcconfig */,
-				7921D214BE8E6AACFB6E20C4 /* Pods-CarRentingApplication.release.xcconfig */,
-				14A2FC6374B950BD10394F60 /* Pods-CarRentingApplicationTests.debug.xcconfig */,
-				522727D65770812A89FA8203 /* Pods-CarRentingApplicationTests.release.xcconfig */,
-				41E314050E539657E3BC0F90 /* Pods-CarRentingApplicationUITests.debug.xcconfig */,
-				5B03F00AF221462FB607A98F /* Pods-CarRentingApplicationUITests.release.xcconfig */,
+				162D533E821918827901E491 /* Pods-CarRentingApplication.debug.xcconfig */,
+				08D54771CA42D61E7D8B37FD /* Pods-CarRentingApplication.release.xcconfig */,
+				4A1D6DDC138037A05E05EA5E /* Pods-CarRentingApplicationTests.debug.xcconfig */,
+				854288F8D462A25E8652599B /* Pods-CarRentingApplicationTests.release.xcconfig */,
+				2C84FC2F9AC98145514C0410 /* Pods-CarRentingApplicationUITests.debug.xcconfig */,
+				50982ECA4E9176B1E1805308 /* Pods-CarRentingApplicationUITests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -127,7 +135,7 @@
 				DBB7C8CC23535E0500DEBBB3 /* CarRentingApplicationUITests */,
 				DBB7C8AB23535DF900DEBBB3 /* Products */,
 				C2B89EB5104D1865EA2C3CFE /* Pods */,
-				5C205B693683F096231368D7 /* Frameworks */,
+				A3CDA45057DBF34467C602AB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -145,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				DBDA05A92359D7E2005026DF /* Assembly */,
+				DBDA05B2235A0696005026DF /* Network */,
 				DBDA05A62359D525005026DF /* Storyboard */,
 				DBDA05A52359D515005026DF /* Supporting Files */,
 				DBB7C8AD23535DF900DEBBB3 /* AppDelegate.swift */,
@@ -198,6 +207,25 @@
 			path = Assembly;
 			sourceTree = "<group>";
 		};
+		DBDA05B2235A0696005026DF /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				DBEC208A235C8D690085BEAB /* Network Extensions */,
+				DBEC208D235C8E9B0085BEAB /* NetworkConfig.swift */,
+				DBEC208F235C92CB0085BEAB /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		DBEC208A235C8D690085BEAB /* Network Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DBDA05B3235A06AE005026DF /* MultiMoyaProvider.swift */,
+				DBEC208B235C8D8F0085BEAB /* MultiMoyaProvider+Codable.swift */,
+			);
+			path = "Network Extensions";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -205,11 +233,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DBB7C8D223535E0500DEBBB3 /* Build configuration list for PBXNativeTarget "CarRentingApplication" */;
 			buildPhases = (
-				7B9AC821A68A9315DFBBEE2C /* [CP] Check Pods Manifest.lock */,
+				D168B5C4744181ACC7471F5F /* [CP] Check Pods Manifest.lock */,
 				DBB7C8A623535DF900DEBBB3 /* Sources */,
 				DBB7C8A723535DF900DEBBB3 /* Frameworks */,
 				DBB7C8A823535DF900DEBBB3 /* Resources */,
-				E98A57A73048A560557B2DAE /* [CP] Embed Pods Frameworks */,
+				4FBCC17EE0A76F048430FB27 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -224,7 +252,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DBB7C8D523535E0500DEBBB3 /* Build configuration list for PBXNativeTarget "CarRentingApplicationTests" */;
 			buildPhases = (
-				44026B26B1A369CB3F79EF60 /* [CP] Check Pods Manifest.lock */,
+				87C7DB8D617525B85221AD5B /* [CP] Check Pods Manifest.lock */,
 				DBB7C8BA23535E0500DEBBB3 /* Sources */,
 				DBB7C8BB23535E0500DEBBB3 /* Frameworks */,
 				DBB7C8BC23535E0500DEBBB3 /* Resources */,
@@ -243,7 +271,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DBB7C8D823535E0500DEBBB3 /* Build configuration list for PBXNativeTarget "CarRentingApplicationUITests" */;
 			buildPhases = (
-				CCDD16A0BC440445578DDFD1 /* [CP] Check Pods Manifest.lock */,
+				E4E7A083C91E294283B1E753 /* [CP] Check Pods Manifest.lock */,
 				DBB7C8C523535E0500DEBBB3 /* Sources */,
 				DBB7C8C623535E0500DEBBB3 /* Frameworks */,
 				DBB7C8C723535E0500DEBBB3 /* Resources */,
@@ -330,7 +358,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		44026B26B1A369CB3F79EF60 /* [CP] Check Pods Manifest.lock */ = {
+		4FBCC17EE0A76F048430FB27 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CarRentingApplication/Pods-CarRentingApplication-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CarRentingApplication/Pods-CarRentingApplication-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CarRentingApplication/Pods-CarRentingApplication-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		87C7DB8D617525B85221AD5B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -352,7 +397,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7B9AC821A68A9315DFBBEE2C /* [CP] Check Pods Manifest.lock */ = {
+		D168B5C4744181ACC7471F5F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -374,7 +419,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CCDD16A0BC440445578DDFD1 /* [CP] Check Pods Manifest.lock */ = {
+		E4E7A083C91E294283B1E753 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -396,23 +441,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E98A57A73048A560557B2DAE /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CarRentingApplication/Pods-CarRentingApplication-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CarRentingApplication/Pods-CarRentingApplication-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CarRentingApplication/Pods-CarRentingApplication-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -420,8 +448,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBEC208E235C8E9B0085BEAB /* NetworkConfig.swift in Sources */,
 				DBDA05AB2359D8D6005026DF /* ViewAssembly.swift in Sources */,
 				DBB7C8AE23535DF900DEBBB3 /* AppDelegate.swift in Sources */,
+				DBEC208C235C8D8F0085BEAB /* MultiMoyaProvider+Codable.swift in Sources */,
+				DBEC2090235C92CB0085BEAB /* NetworkManager.swift in Sources */,
+				DBDA05B4235A06AE005026DF /* MultiMoyaProvider.swift in Sources */,
 				DBDA05B12359D9A0005026DF /* InteractorAssembly.swift in Sources */,
 				DBDA05AF2359D94F005026DF /* NetworkAssembly.swift in Sources */,
 			);
@@ -596,7 +628,7 @@
 		};
 		DBB7C8D323535E0500DEBBB3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6C5A18E86484BD24BCE0066A /* Pods-CarRentingApplication.debug.xcconfig */;
+			baseConfigurationReference = 162D533E821918827901E491 /* Pods-CarRentingApplication.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -614,7 +646,7 @@
 		};
 		DBB7C8D423535E0500DEBBB3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7921D214BE8E6AACFB6E20C4 /* Pods-CarRentingApplication.release.xcconfig */;
+			baseConfigurationReference = 08D54771CA42D61E7D8B37FD /* Pods-CarRentingApplication.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -632,7 +664,7 @@
 		};
 		DBB7C8D623535E0500DEBBB3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 14A2FC6374B950BD10394F60 /* Pods-CarRentingApplicationTests.debug.xcconfig */;
+			baseConfigurationReference = 4A1D6DDC138037A05E05EA5E /* Pods-CarRentingApplicationTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -653,7 +685,7 @@
 		};
 		DBB7C8D723535E0500DEBBB3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 522727D65770812A89FA8203 /* Pods-CarRentingApplicationTests.release.xcconfig */;
+			baseConfigurationReference = 854288F8D462A25E8652599B /* Pods-CarRentingApplicationTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -674,7 +706,7 @@
 		};
 		DBB7C8D923535E0500DEBBB3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 41E314050E539657E3BC0F90 /* Pods-CarRentingApplicationUITests.debug.xcconfig */;
+			baseConfigurationReference = 2C84FC2F9AC98145514C0410 /* Pods-CarRentingApplicationUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -694,7 +726,7 @@
 		};
 		DBB7C8DA23535E0500DEBBB3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B03F00AF221462FB607A98F /* Pods-CarRentingApplicationUITests.release.xcconfig */;
+			baseConfigurationReference = 50982ECA4E9176B1E1805308 /* Pods-CarRentingApplicationUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
