@@ -10,6 +10,7 @@ target 'CarRentingApplication' do
   # Dependency injection
     pod 'Swinject'
     pod 'SwinjectStoryboard'
+    pod 'SwinjectAutoregistration'
     
   # Network
     pod 'Moya'

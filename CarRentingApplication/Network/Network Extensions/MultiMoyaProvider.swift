@@ -8,7 +8,6 @@
 
 import Foundation
 import Moya
-import RxSwift
 
 class MultiMoyaProvider: MoyaProvider<MultiTarget> {
     
@@ -26,19 +25,5 @@ class MultiMoyaProvider: MoyaProvider<MultiTarget> {
                    manager: manager,
                    plugins: plugins,
                    trackInflights: trackInflights)
-    }
-}
-
-extension MultiMoyaProvider {
-    internal func requestDecoded<T, M>(_ target: T, callBackQueue: DispatchQueue? = nil) -> Single<M> where T: TargetType, M: Codable {
-        return self.rx.request(MultiTarget(target), callbackQueue: callBackQueue)
-            .flatMap({ response -> Single<M> in
-                do {
-                    let data = try response.map(M.self)
-                    return Single<M>.just(data)
-                } catch {
-                    return Single<M>.error(error)
-                }
-            })
     }
 }
