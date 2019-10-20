@@ -7,10 +7,14 @@
 //
 
 import Foundation
+import SwinjectAutoregistration
 import Swinject
 
 class ViewAssembly: Assembly {
     func assemble(container: Container) {
-        
+        container.autoregister(LoginViewModelType.self, initializer: LoginViewModel.init)
+        container.storyboardInitCompleted(LoginViewController.self, initCompleted: { r,c in
+            c.viewModel = r.resolve(LoginViewModelType.self)!
+        })
     }
 }
