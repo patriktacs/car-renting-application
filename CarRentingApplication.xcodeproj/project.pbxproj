@@ -24,6 +24,7 @@
 		DBEC208C235C8D8F0085BEAB /* MultiMoyaProvider+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEC208B235C8D8F0085BEAB /* MultiMoyaProvider+Codable.swift */; };
 		DBEC208E235C8E9B0085BEAB /* NetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEC208D235C8E9B0085BEAB /* NetworkConfig.swift */; };
 		DBEC2090235C92CB0085BEAB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEC208F235C92CB0085BEAB /* NetworkManager.swift */; };
+		DBEC2099235C9EBE0085BEAB /* Notifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEC2098235C9EBE0085BEAB /* Notifiable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		DBEC208B235C8D8F0085BEAB /* MultiMoyaProvider+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MultiMoyaProvider+Codable.swift"; sourceTree = "<group>"; };
 		DBEC208D235C8E9B0085BEAB /* NetworkConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfig.swift; sourceTree = "<group>"; };
 		DBEC208F235C92CB0085BEAB /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		DBEC2098235C9EBE0085BEAB /* Notifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifiable.swift; sourceTree = "<group>"; };
 		DF12C5B24BC4F3A5584E28B2 /* Pods_CarRentingApplication.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarRentingApplication.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -153,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				DBDA05A92359D7E2005026DF /* Assembly */,
+				DBEC2097235C9EA80085BEAB /* Extension */,
 				DBDA05B2235A0696005026DF /* Network */,
 				DBDA05A62359D525005026DF /* Storyboard */,
 				DBDA05A52359D515005026DF /* Supporting Files */,
@@ -224,6 +227,14 @@
 				DBEC208B235C8D8F0085BEAB /* MultiMoyaProvider+Codable.swift */,
 			);
 			path = "Network Extensions";
+			sourceTree = "<group>";
+		};
+		DBEC2097235C9EA80085BEAB /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DBEC2098235C9EBE0085BEAB /* Notifiable.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -452,6 +463,7 @@
 				DBDA05AB2359D8D6005026DF /* ViewAssembly.swift in Sources */,
 				DBB7C8AE23535DF900DEBBB3 /* AppDelegate.swift in Sources */,
 				DBEC208C235C8D8F0085BEAB /* MultiMoyaProvider+Codable.swift in Sources */,
+				DBEC2099235C9EBE0085BEAB /* Notifiable.swift in Sources */,
 				DBEC2090235C92CB0085BEAB /* NetworkManager.swift in Sources */,
 				DBDA05B4235A06AE005026DF /* MultiMoyaProvider.swift in Sources */,
 				DBDA05B12359D9A0005026DF /* InteractorAssembly.swift in Sources */,
