@@ -15,8 +15,7 @@ protocol SessioningManager {
     var usernameRelay: BehaviorRelay<String?> { get }
     var passwordRelay: BehaviorRelay<String?> { get }
     
-    var username: String { get }
-    var password: String { get }
+    var token: String { get }
     var sessionStatus: Bool { get }
     
     func killSession()
@@ -27,17 +26,12 @@ class SessionManager: SessioningManager {
     var usernameRelay: BehaviorRelay<String?> = BehaviorRelay<String?>(value: "")
     var passwordRelay: BehaviorRelay<String?> = BehaviorRelay<String?>(value: "")
     
-    private let usernameKey = "username"
-    var username: String {
-        return persistencyManager.getString(forKey: usernameKey)
+    private let tokenKey = "32d7f64f3efd831c2f5df9c7c192bfc9"
+    var token: String {
+        return persistencyManager.getString(forKey: tokenKey)
     }
     
-    private let passwordKey = "password"
-    var password: String {
-        return persistencyManager.getString(forKey: passwordKey)
-    }
-    
-    private let sessionStatusKey = "sessionStatus"
+    private let sessionStatusKey = "5f78214f2d13384246b264637b11a82d"
     var sessionStatus: Bool {
         return persistencyManager.getBool(forKey: sessionStatusKey)
     }
@@ -50,24 +44,24 @@ class SessionManager: SessioningManager {
         self.persistencyManager = persistencyManager
     }
     
-    func setupSession() {
-        persistencyManager.setData(set: usernameRelay.value, forKey: usernameKey)
-        persistencyManager.setData(set: passwordRelay.value, forKey: passwordKey)
+    func setupSession(token: String) {
+        persistencyManager.setData(set: token, forKey: tokenKey)
         persistencyManager.setData(set: true, forKey: sessionStatusKey)
     }
     
     func killSession() {
-        persistencyManager.removeData(forKey: usernameKey)
-        persistencyManager.removeData(forKey: passwordKey)
+        persistencyManager.removeData(forKey: tokenKey)
         persistencyManager.setData(set: false, forKey: sessionStatusKey)
     }
     
     func login() -> Single<Response> {
-        return networkManager.provider.rx.request(MultiTarget(LoginAPI.login(username: (usernameRelay.value ?? ""), password: (passwordRelay.value ?? ""))))
+        let token = Data(((usernameRelay.value ?? "") + ":" + (passwordRelay.value ?? "")).utf8).base64EncodedString()
+        return networkManager.provider.rx.request(MultiTarget(LoginAPI.login(token: token)))
             .filterSuccessfulStatusCodes()
             .do(onSuccess: { _ in
-                self.setupSession()
+                self.setupSession(token: token)
             }, onError: { _ in
+                self.passwordRelay.accept("")
                 self.killSession()
             })
     }

@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     fileprivate let assemblies: [Assembly] = [InteractorAssembly(),
                                   NetworkAssembly(),
-                                  PersistencyAssembly(),
+                                  ManagerAssembly(),
                                   ViewAssembly()]
     
     var container: Container = {

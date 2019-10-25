@@ -10,7 +10,7 @@ import Foundation
 import Moya
 
 enum LoginAPI {
-    case login(username: String, password: String)
+    case login(token: String)
 }
 
 extension LoginAPI: TargetType {
@@ -46,8 +46,7 @@ extension LoginAPI: TargetType {
     
     var headers: [String : String]? {
         switch self {
-        case .login(let username, let password):
-            let token = Data((username + ":" + password).utf8).base64EncodedString()
+        case .login(let token):
             return ["Authorization": "Basic " + token]
         }
         
