@@ -26,7 +26,7 @@
 		DBEC2090235C92CB0085BEAB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEC208F235C92CB0085BEAB /* NetworkManager.swift */; };
 		DBEC2099235C9EBE0085BEAB /* Notifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEC2098235C9EBE0085BEAB /* Notifiable.swift */; };
 		DBEC209E235CAB3D0085BEAB /* PersistencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEC209D235CAB3D0085BEAB /* PersistencyManager.swift */; };
-		DBEC20A0235CAFAC0085BEAB /* PersistencyAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEC209F235CAFAC0085BEAB /* PersistencyAssembly.swift */; };
+		DBEC20A0235CAFAC0085BEAB /* ManagerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEC209F235CAFAC0085BEAB /* ManagerAssembly.swift */; };
 		DBEC20A2235CB5110085BEAB /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEC20A1235CB5110085BEAB /* SessionManager.swift */; };
 		DBEC20A5235CB9700085BEAB /* LoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEC20A4235CB9700085BEAB /* LoginAPI.swift */; };
 		DBEC20A8235CC1660085BEAB /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEC20A7235CC1660085BEAB /* LoginViewModel.swift */; };
@@ -81,7 +81,7 @@
 		DBEC208F235C92CB0085BEAB /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		DBEC2098235C9EBE0085BEAB /* Notifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifiable.swift; sourceTree = "<group>"; };
 		DBEC209D235CAB3D0085BEAB /* PersistencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistencyManager.swift; sourceTree = "<group>"; };
-		DBEC209F235CAFAC0085BEAB /* PersistencyAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistencyAssembly.swift; sourceTree = "<group>"; };
+		DBEC209F235CAFAC0085BEAB /* ManagerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerAssembly.swift; sourceTree = "<group>"; };
 		DBEC20A1235CB5110085BEAB /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		DBEC20A4235CB9700085BEAB /* LoginAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAPI.swift; sourceTree = "<group>"; };
 		DBEC20A7235CC1660085BEAB /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -169,6 +169,7 @@
 				DBEC2097235C9EA80085BEAB /* Extension */,
 				DBDA05B2235A0696005026DF /* Network */,
 				DBEC209C235CAAD50085BEAB /* Persistency */,
+				DBD8C1C42363159F00902426 /* Session */,
 				DBDA05A62359D525005026DF /* Storyboard */,
 				DBDA05A52359D515005026DF /* Supporting Files */,
 				DBEC20A6235CC1530085BEAB /* UseCase */,
@@ -196,6 +197,14 @@
 			path = CarRentingApplicationUITests;
 			sourceTree = "<group>";
 		};
+		DBD8C1C42363159F00902426 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				DBEC20A1235CB5110085BEAB /* SessionManager.swift */,
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
 		DBDA05A52359D515005026DF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,7 +228,7 @@
 			children = (
 				DBDA05B02359D9A0005026DF /* InteractorAssembly.swift */,
 				DBDA05AE2359D94F005026DF /* NetworkAssembly.swift */,
-				DBEC209F235CAFAC0085BEAB /* PersistencyAssembly.swift */,
+				DBEC209F235CAFAC0085BEAB /* ManagerAssembly.swift */,
 				DBDA05AA2359D8D6005026DF /* ViewAssembly.swift */,
 			);
 			path = Assembly;
@@ -232,7 +241,6 @@
 				DBEC208A235C8D690085BEAB /* Network Extensions */,
 				DBEC208D235C8E9B0085BEAB /* NetworkConfig.swift */,
 				DBEC208F235C92CB0085BEAB /* NetworkManager.swift */,
-				DBEC20A1235CB5110085BEAB /* SessionManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -513,7 +521,7 @@
 				DBDA05AB2359D8D6005026DF /* ViewAssembly.swift in Sources */,
 				DBEC20A2235CB5110085BEAB /* SessionManager.swift in Sources */,
 				DBEC20AA235CC7310085BEAB /* LoginViewController.swift in Sources */,
-				DBEC20A0235CAFAC0085BEAB /* PersistencyAssembly.swift in Sources */,
+				DBEC20A0235CAFAC0085BEAB /* ManagerAssembly.swift in Sources */,
 				DBB7C8AE23535DF900DEBBB3 /* AppDelegate.swift in Sources */,
 				DBEC208C235C8D8F0085BEAB /* MultiMoyaProvider+Codable.swift in Sources */,
 				DBEC20A8235CC1660085BEAB /* LoginViewModel.swift in Sources */,
