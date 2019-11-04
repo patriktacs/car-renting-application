@@ -11,6 +11,7 @@
 		6220A9A9343D49040DB25E09 /* Pods_CarRentingApplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF12C5B24BC4F3A5584E28B2 /* Pods_CarRentingApplication.framework */; };
 		64472B079289792D6A56939A /* Pods_CarRentingApplicationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4107FB72968E0B5732C1FD6E /* Pods_CarRentingApplicationTests.framework */; };
 		DB0A5EF2235CE8D300DB0225 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB0A5EF1235CE8D300DB0225 /* Login.storyboard */; };
+		DB614B82236F92E6002EAF84 /* RegistrationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB614B81236F92E6002EAF84 /* RegistrationAPI.swift */; };
 		DB72D935236EED4E0090B85C /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB72D934236EED4E0090B85C /* TextField.swift */; };
 		DB9B128C235D00FE005F8F0A /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB9B128B235D00FE005F8F0A /* Dashboard.storyboard */; };
 		DBB7C8AE23535DF900DEBBB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB7C8AD23535DF900DEBBB3 /* AppDelegate.swift */; };
@@ -76,6 +77,7 @@
 		854288F8D462A25E8652599B /* Pods-CarRentingApplicationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarRentingApplicationTests.release.xcconfig"; path = "Target Support Files/Pods-CarRentingApplicationTests/Pods-CarRentingApplicationTests.release.xcconfig"; sourceTree = "<group>"; };
 		AB9613935A635E0CE2C069C0 /* Pods_CarRentingApplicationUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarRentingApplicationUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB0A5EF1235CE8D300DB0225 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		DB614B81236F92E6002EAF84 /* RegistrationAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationAPI.swift; sourceTree = "<group>"; };
 		DB72D934236EED4E0090B85C /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		DB9B128B235D00FE005F8F0A /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		DBB7C8AA23535DF900DEBBB3 /* CarRentingApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarRentingApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -409,6 +411,7 @@
 			isa = PBXGroup;
 			children = (
 				DBEC20A4235CB9700085BEAB /* LoginAPI.swift */,
+				DB614B81236F92E6002EAF84 /* RegistrationAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -658,6 +661,7 @@
 				DBDA05AB2359D8D6005026DF /* ViewAssembly.swift in Sources */,
 				DBEC20A2235CB5110085BEAB /* SessionManager.swift in Sources */,
 				DBE1582A236F60FE0037B357 /* RegisterInteractor.swift in Sources */,
+				DB614B82236F92E6002EAF84 /* RegistrationAPI.swift in Sources */,
 				DBE15820236F5ADB0037B357 /* DrivingLicenseFrontUploadViewController.swift in Sources */,
 				DBEC20AA235CC7310085BEAB /* LoginViewController.swift in Sources */,
 				DBEC20A0235CAFAC0085BEAB /* ManagerAssembly.swift in Sources */,

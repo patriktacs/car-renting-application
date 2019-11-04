@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DrivingLicenseFrontUploadViewController: UIViewController, UIImagePickerControllerDelegate, Notifiable {
+class DrivingLicenseFrontUploadViewController: UIViewController, Notifiable {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var drivingLicenseFrontImage: UIImageView!
@@ -24,8 +24,9 @@ class DrivingLicenseFrontUploadViewController: UIViewController, UIImagePickerCo
         hideKeyboardWhenTappedAround()
         
         titleLabel.text = "Driving license front image"
+        titleLabel.textColor = .black
         nextButton.setupData(title: "Next")
-        drivingLicenseFrontImage.backgroundColor = .gray
+        drivingLicenseFrontImage.contentMode = .scaleAspectFill
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -33,6 +34,7 @@ class DrivingLicenseFrontUploadViewController: UIViewController, UIImagePickerCo
     }
     
     @IBAction func nextButtonAction(_ sender: Any) {
+        viewModel.setImage(image: drivingLicenseFrontImage.image ?? UIImage())
         let loginStoryboard = UIStoryboard(name: "Login", bundle: nil)
         let personalDataInputViewController = loginStoryboard.instantiateViewController(withIdentifier: "DrivingLicenseBackUpload")
         self.navigationController?.pushViewController(personalDataInputViewController, animated: true)
@@ -55,7 +57,7 @@ class DrivingLicenseFrontUploadViewController: UIViewController, UIImagePickerCo
     
     @objc func loadCamera(sender: UITapGestureRecognizer) {
         let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
+        imagePicker.delegate = self
         
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
             imagePicker.sourceType = .camera
@@ -64,7 +66,9 @@ class DrivingLicenseFrontUploadViewController: UIViewController, UIImagePickerCo
             self.showNotification("Device error", "Camera not found.")
         }
     }
-    
+}
+
+extension DrivingLicenseFrontUploadViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
         drivingLicenseFrontImage.image = image

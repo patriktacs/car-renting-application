@@ -32,5 +32,20 @@ class ViewAssembly: Assembly {
         container.storyboardInitCompleted(DrivingLicenseInputDataViewController.self, initCompleted: { r,c in
             c.viewModel = r.resolve(DrivingLicenseInputDataViewModelType.self)!
         })
+        
+        container.autoregister(DrivingLicenseFrontUploadViewModelType.self, initializer: DrivingLicenseFrontUploadViewModel.init)
+        container.storyboardInitCompleted(DrivingLicenseFrontUploadViewController.self, initCompleted: { r,c in
+            c.viewModel = r.resolve(DrivingLicenseFrontUploadViewModelType.self)!
+        })
+        
+        container.autoregister(DrivingLicenseBackUploadViewModelType.self, initializer: DrivingLicenseBackUploadViewModel.init)
+        container.storyboardInitCompleted(DrivingLicenseBackUploadViewController.self, initCompleted: { r,c in
+            c.viewModel = r.resolve(DrivingLicenseBackUploadViewModelType.self)!
+        })
+        
+        container.autoregister(ProfileImageUploadViewModelType.self, initializer: ProfileImageUploadViewModel.init)
+        container.storyboardInitCompleted(ProfileImageUploadViewController.self, initCompleted: { r,c in
+            c.viewModel = r.resolve(ProfileImageUploadViewModelType.self)!
+        })
     }
 }

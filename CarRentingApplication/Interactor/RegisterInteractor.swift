@@ -7,7 +7,9 @@
 //
 
 import Foundation
+import RxSwift
 import RxCocoa
+import Moya
 
 protocol RegistratingInteractor {
     
@@ -19,7 +21,11 @@ protocol RegistratingInteractor {
     var drivingLicenseNumberRelay: BehaviorRelay<String?> { get }
     var drivingLicenseExpirationRelay: BehaviorRelay<String?> { get }
     
+    func setDrivingLicenceFrontImage(image: UIImage)
+    func setDrivingLicenceBackImage(image: UIImage)
+    func setProfileImage(image: UIImage)
     func cancelRegistration()
+    func register() -> Single<Response>
 }
 
 class RegisterInteractor: RegistratingInteractor {
@@ -32,6 +38,28 @@ class RegisterInteractor: RegistratingInteractor {
     var drivingLicenseNumberRelay = BehaviorRelay<String?>(value: "")
     var drivingLicenseExpirationRelay = BehaviorRelay<String?>(value: "")
     
+    var drivingLicenseFrontImage: UIImage!
+    var drivingLicenseBackImage: UIImage!
+    var profileImage: UIImage!
+    
+    var networkManager: NetworkingManager!
+    
+    init(networkManager: NetworkingManager) {
+        self.networkManager = networkManager
+    }
+    
+    func setDrivingLicenceFrontImage(image: UIImage) {
+        drivingLicenseFrontImage = image
+    }
+    
+    func setDrivingLicenceBackImage(image: UIImage) {
+        drivingLicenseBackImage = image
+    }
+    
+    func setProfileImage(image: UIImage) {
+        profileImage = image
+    }
+    
     func cancelRegistration() {
         emailRelay.accept("")
         passwordRelay.accept("")
@@ -40,5 +68,13 @@ class RegisterInteractor: RegistratingInteractor {
         phoneNumberRelay.accept("")
         drivingLicenseNumberRelay.accept("")
         drivingLicenseExpirationRelay.accept("")
+        drivingLicenseFrontImage = nil
+        drivingLicenseBackImage = nil
+        profileImage = nil
+    }
+    
+    func register() -> Single<Response> {
+        return networkManager.provider.rx.request(MultiTarget(RegistrationAPI.register(drivingLicenseFront: drivingLicenseFrontImage, drivingLicenseBack: drivingLicenseBackImage, profileImage: profileImage, licenceCardNumber: drivingLicenseNumberRelay.value ?? "", firstName: firstNameRelay.value ?? "", expirationDate: drivingLicenseExpirationRelay.value ?? "", lastName: lastNameRelay.value ?? "", emailAddress: emailRelay.value ?? "", password: passwordRelay.value ?? "", phone: phoneNumberRelay.value ?? "")))
+        .filterSuccessfulStatusCodes()
     }
 }
