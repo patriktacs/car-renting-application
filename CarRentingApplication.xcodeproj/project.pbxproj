@@ -11,16 +11,33 @@
 		6220A9A9343D49040DB25E09 /* Pods_CarRentingApplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF12C5B24BC4F3A5584E28B2 /* Pods_CarRentingApplication.framework */; };
 		64472B079289792D6A56939A /* Pods_CarRentingApplicationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4107FB72968E0B5732C1FD6E /* Pods_CarRentingApplicationTests.framework */; };
 		DB0A5EF2235CE8D300DB0225 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB0A5EF1235CE8D300DB0225 /* Login.storyboard */; };
+		DB614B82236F92E6002EAF84 /* RegistrationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB614B81236F92E6002EAF84 /* RegistrationAPI.swift */; };
+		DB72D935236EED4E0090B85C /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB72D934236EED4E0090B85C /* TextField.swift */; };
 		DB9B128C235D00FE005F8F0A /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB9B128B235D00FE005F8F0A /* Dashboard.storyboard */; };
 		DBB7C8AE23535DF900DEBBB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB7C8AD23535DF900DEBBB3 /* AppDelegate.swift */; };
 		DBB7C8B523535E0400DEBBB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBB7C8B423535E0400DEBBB3 /* Assets.xcassets */; };
 		DBB7C8B823535E0400DEBBB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBB7C8B623535E0400DEBBB3 /* LaunchScreen.storyboard */; };
 		DBB7C8C323535E0500DEBBB3 /* CarRentingApplicationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB7C8C223535E0500DEBBB3 /* CarRentingApplicationTests.swift */; };
 		DBB7C8CE23535E0500DEBBB3 /* CarRentingApplicationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB7C8CD23535E0500DEBBB3 /* CarRentingApplicationUITests.swift */; };
+		DBD8C1C823632A6E00902426 /* AccountDataInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD8C1C723632A6E00902426 /* AccountDataInputViewController.swift */; };
+		DBD8C1CA23632A8200902426 /* AccountDataInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD8C1C923632A8200902426 /* AccountDataInputViewModel.swift */; };
 		DBDA05AB2359D8D6005026DF /* ViewAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDA05AA2359D8D6005026DF /* ViewAssembly.swift */; };
 		DBDA05AF2359D94F005026DF /* NetworkAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDA05AE2359D94F005026DF /* NetworkAssembly.swift */; };
 		DBDA05B12359D9A0005026DF /* InteractorAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDA05B02359D9A0005026DF /* InteractorAssembly.swift */; };
 		DBDA05B4235A06AE005026DF /* MultiMoyaProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDA05B3235A06AE005026DF /* MultiMoyaProvider.swift */; };
+		DBE15806236EF3750037B357 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE15805236EF3750037B357 /* Button.swift */; };
+		DBE1580A236F28580037B357 /* PersonalDataInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE15809236F28580037B357 /* PersonalDataInputViewController.swift */; };
+		DBE1580C236F29900037B357 /* PersonalDataInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE1580B236F29900037B357 /* PersonalDataInputViewModel.swift */; };
+		DBE15817236F582D0037B357 /* DrivingLicenseInputDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE15815236F582D0037B357 /* DrivingLicenseInputDataViewModel.swift */; };
+		DBE15818236F582D0037B357 /* DrivingLicenseInputDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE15816236F582D0037B357 /* DrivingLicenseInputDataViewController.swift */; };
+		DBE1581C236F58DE0037B357 /* DrivingLicenseBackUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE1581B236F58DE0037B357 /* DrivingLicenseBackUploadViewController.swift */; };
+		DBE1581E236F58F00037B357 /* DrivingLicenseBackUploadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE1581D236F58F00037B357 /* DrivingLicenseBackUploadViewModel.swift */; };
+		DBE15820236F5ADB0037B357 /* DrivingLicenseFrontUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE1581F236F5ADB0037B357 /* DrivingLicenseFrontUploadViewController.swift */; };
+		DBE15822236F5AED0037B357 /* DrivingLicenseFrontUploadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE15821236F5AED0037B357 /* DrivingLicenseFrontUploadViewModel.swift */; };
+		DBE15824236F5D880037B357 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE15823236F5D880037B357 /* UIViewController.swift */; };
+		DBE15826236F5F3D0037B357 /* ProfileImageUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE15825236F5F3D0037B357 /* ProfileImageUploadViewController.swift */; };
+		DBE15828236F5F4D0037B357 /* ProfileImageUploadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE15827236F5F4D0037B357 /* ProfileImageUploadViewModel.swift */; };
+		DBE1582A236F60FE0037B357 /* RegisterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE15829236F60FE0037B357 /* RegisterInteractor.swift */; };
 		DBEC208C235C8D8F0085BEAB /* MultiMoyaProvider+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEC208B235C8D8F0085BEAB /* MultiMoyaProvider+Codable.swift */; };
 		DBEC208E235C8E9B0085BEAB /* NetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEC208D235C8E9B0085BEAB /* NetworkConfig.swift */; };
 		DBEC2090235C92CB0085BEAB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEC208F235C92CB0085BEAB /* NetworkManager.swift */; };
@@ -60,6 +77,8 @@
 		854288F8D462A25E8652599B /* Pods-CarRentingApplicationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarRentingApplicationTests.release.xcconfig"; path = "Target Support Files/Pods-CarRentingApplicationTests/Pods-CarRentingApplicationTests.release.xcconfig"; sourceTree = "<group>"; };
 		AB9613935A635E0CE2C069C0 /* Pods_CarRentingApplicationUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarRentingApplicationUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB0A5EF1235CE8D300DB0225 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		DB614B81236F92E6002EAF84 /* RegistrationAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationAPI.swift; sourceTree = "<group>"; };
+		DB72D934236EED4E0090B85C /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		DB9B128B235D00FE005F8F0A /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		DBB7C8AA23535DF900DEBBB3 /* CarRentingApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarRentingApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBB7C8AD23535DF900DEBBB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -72,10 +91,25 @@
 		DBB7C8C923535E0500DEBBB3 /* CarRentingApplicationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarRentingApplicationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBB7C8CD23535E0500DEBBB3 /* CarRentingApplicationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRentingApplicationUITests.swift; sourceTree = "<group>"; };
 		DBB7C8CF23535E0500DEBBB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBD8C1C723632A6E00902426 /* AccountDataInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDataInputViewController.swift; sourceTree = "<group>"; };
+		DBD8C1C923632A8200902426 /* AccountDataInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDataInputViewModel.swift; sourceTree = "<group>"; };
 		DBDA05AA2359D8D6005026DF /* ViewAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAssembly.swift; sourceTree = "<group>"; };
 		DBDA05AE2359D94F005026DF /* NetworkAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAssembly.swift; sourceTree = "<group>"; };
 		DBDA05B02359D9A0005026DF /* InteractorAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorAssembly.swift; sourceTree = "<group>"; };
 		DBDA05B3235A06AE005026DF /* MultiMoyaProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiMoyaProvider.swift; sourceTree = "<group>"; };
+		DBE15805236EF3750037B357 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		DBE15809236F28580037B357 /* PersonalDataInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDataInputViewController.swift; sourceTree = "<group>"; };
+		DBE1580B236F29900037B357 /* PersonalDataInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDataInputViewModel.swift; sourceTree = "<group>"; };
+		DBE15815236F582D0037B357 /* DrivingLicenseInputDataViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrivingLicenseInputDataViewModel.swift; sourceTree = "<group>"; };
+		DBE15816236F582D0037B357 /* DrivingLicenseInputDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrivingLicenseInputDataViewController.swift; sourceTree = "<group>"; };
+		DBE1581B236F58DE0037B357 /* DrivingLicenseBackUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrivingLicenseBackUploadViewController.swift; sourceTree = "<group>"; };
+		DBE1581D236F58F00037B357 /* DrivingLicenseBackUploadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrivingLicenseBackUploadViewModel.swift; sourceTree = "<group>"; };
+		DBE1581F236F5ADB0037B357 /* DrivingLicenseFrontUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrivingLicenseFrontUploadViewController.swift; sourceTree = "<group>"; };
+		DBE15821236F5AED0037B357 /* DrivingLicenseFrontUploadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrivingLicenseFrontUploadViewModel.swift; sourceTree = "<group>"; };
+		DBE15823236F5D880037B357 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		DBE15825236F5F3D0037B357 /* ProfileImageUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageUploadViewController.swift; sourceTree = "<group>"; };
+		DBE15827236F5F4D0037B357 /* ProfileImageUploadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageUploadViewModel.swift; sourceTree = "<group>"; };
+		DBE15829236F60FE0037B357 /* RegisterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInteractor.swift; sourceTree = "<group>"; };
 		DBEC208B235C8D8F0085BEAB /* MultiMoyaProvider+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MultiMoyaProvider+Codable.swift"; sourceTree = "<group>"; };
 		DBEC208D235C8E9B0085BEAB /* NetworkConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfig.swift; sourceTree = "<group>"; };
 		DBEC208F235C92CB0085BEAB /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -140,6 +174,31 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		DB72D931236EECC60090B85C /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				DBE15829236F60FE0037B357 /* RegisterInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		DB72D932236EED200090B85C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DBE15804236EF35F0037B357 /* UIButton */,
+				DB72D933236EED260090B85C /* UITextField */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DB72D933236EED260090B85C /* UITextField */ = {
+			isa = PBXGroup;
+			children = (
+				DB72D934236EED4E0090B85C /* TextField.swift */,
+			);
+			path = UITextField;
+			sourceTree = "<group>";
+		};
 		DBB7C8A123535DF900DEBBB3 = {
 			isa = PBXGroup;
 			children = (
@@ -167,12 +226,14 @@
 			children = (
 				DBDA05A92359D7E2005026DF /* Assembly */,
 				DBEC2097235C9EA80085BEAB /* Extension */,
+				DB72D931236EECC60090B85C /* Interactor */,
 				DBDA05B2235A0696005026DF /* Network */,
 				DBEC209C235CAAD50085BEAB /* Persistency */,
 				DBD8C1C42363159F00902426 /* Session */,
 				DBDA05A62359D525005026DF /* Storyboard */,
 				DBDA05A52359D515005026DF /* Supporting Files */,
 				DBEC20A6235CC1530085BEAB /* UseCase */,
+				DB72D932236EED200090B85C /* View */,
 				DBB7C8AD23535DF900DEBBB3 /* AppDelegate.swift */,
 				DBB7C8B923535E0400DEBBB3 /* Info.plist */,
 			);
@@ -205,6 +266,28 @@
 			path = Session;
 			sourceTree = "<group>";
 		};
+		DBD8C1C52363204F00902426 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				DBD8C1C62363207C00902426 /* AccountDataInput */,
+				DBE1581A236F589D0037B357 /* DrivingLicenseBackUpload */,
+				DBE15813236F582D0037B357 /* DrivingLicenseFrontUpload */,
+				DBE15814236F582D0037B357 /* DrivingLicenseInput */,
+				DBE15808236F282A0037B357 /* PersonalDataInput */,
+				DBE15819236F589C0037B357 /* ProfileImageUpload */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		DBD8C1C62363207C00902426 /* AccountDataInput */ = {
+			isa = PBXGroup;
+			children = (
+				DBD8C1C723632A6E00902426 /* AccountDataInputViewController.swift */,
+				DBD8C1C923632A8200902426 /* AccountDataInputViewModel.swift */,
+			);
+			path = AccountDataInput;
+			sourceTree = "<group>";
+		};
 		DBDA05A52359D515005026DF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,8 +310,8 @@
 			isa = PBXGroup;
 			children = (
 				DBDA05B02359D9A0005026DF /* InteractorAssembly.swift */,
-				DBDA05AE2359D94F005026DF /* NetworkAssembly.swift */,
 				DBEC209F235CAFAC0085BEAB /* ManagerAssembly.swift */,
+				DBDA05AE2359D94F005026DF /* NetworkAssembly.swift */,
 				DBDA05AA2359D8D6005026DF /* ViewAssembly.swift */,
 			);
 			path = Assembly;
@@ -245,6 +328,59 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		DBE15804236EF35F0037B357 /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				DBE15805236EF3750037B357 /* Button.swift */,
+			);
+			path = UIButton;
+			sourceTree = "<group>";
+		};
+		DBE15808236F282A0037B357 /* PersonalDataInput */ = {
+			isa = PBXGroup;
+			children = (
+				DBE15809236F28580037B357 /* PersonalDataInputViewController.swift */,
+				DBE1580B236F29900037B357 /* PersonalDataInputViewModel.swift */,
+			);
+			path = PersonalDataInput;
+			sourceTree = "<group>";
+		};
+		DBE15813236F582D0037B357 /* DrivingLicenseFrontUpload */ = {
+			isa = PBXGroup;
+			children = (
+				DBE1581F236F5ADB0037B357 /* DrivingLicenseFrontUploadViewController.swift */,
+				DBE15821236F5AED0037B357 /* DrivingLicenseFrontUploadViewModel.swift */,
+			);
+			path = DrivingLicenseFrontUpload;
+			sourceTree = "<group>";
+		};
+		DBE15814236F582D0037B357 /* DrivingLicenseInput */ = {
+			isa = PBXGroup;
+			children = (
+				DBE15816236F582D0037B357 /* DrivingLicenseInputDataViewController.swift */,
+				DBE15815236F582D0037B357 /* DrivingLicenseInputDataViewModel.swift */,
+			);
+			path = DrivingLicenseInput;
+			sourceTree = "<group>";
+		};
+		DBE15819236F589C0037B357 /* ProfileImageUpload */ = {
+			isa = PBXGroup;
+			children = (
+				DBE15825236F5F3D0037B357 /* ProfileImageUploadViewController.swift */,
+				DBE15827236F5F4D0037B357 /* ProfileImageUploadViewModel.swift */,
+			);
+			path = ProfileImageUpload;
+			sourceTree = "<group>";
+		};
+		DBE1581A236F589D0037B357 /* DrivingLicenseBackUpload */ = {
+			isa = PBXGroup;
+			children = (
+				DBE1581B236F58DE0037B357 /* DrivingLicenseBackUploadViewController.swift */,
+				DBE1581D236F58F00037B357 /* DrivingLicenseBackUploadViewModel.swift */,
+			);
+			path = DrivingLicenseBackUpload;
+			sourceTree = "<group>";
+		};
 		DBEC208A235C8D690085BEAB /* Network Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,6 +394,7 @@
 			isa = PBXGroup;
 			children = (
 				DBEC2098235C9EBE0085BEAB /* Notifiable.swift */,
+				DBE15823236F5D880037B357 /* UIViewController.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -274,6 +411,7 @@
 			isa = PBXGroup;
 			children = (
 				DBEC20A4235CB9700085BEAB /* LoginAPI.swift */,
+				DB614B81236F92E6002EAF84 /* RegistrationAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -282,6 +420,7 @@
 			isa = PBXGroup;
 			children = (
 				DBEC20AB235CC7340085BEAB /* Login */,
+				DBD8C1C52363204F00902426 /* Registration */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -518,11 +657,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBEC208E235C8E9B0085BEAB /* NetworkConfig.swift in Sources */,
+				DBE15826236F5F3D0037B357 /* ProfileImageUploadViewController.swift in Sources */,
 				DBDA05AB2359D8D6005026DF /* ViewAssembly.swift in Sources */,
 				DBEC20A2235CB5110085BEAB /* SessionManager.swift in Sources */,
+				DBE1582A236F60FE0037B357 /* RegisterInteractor.swift in Sources */,
+				DB614B82236F92E6002EAF84 /* RegistrationAPI.swift in Sources */,
+				DBE15820236F5ADB0037B357 /* DrivingLicenseFrontUploadViewController.swift in Sources */,
 				DBEC20AA235CC7310085BEAB /* LoginViewController.swift in Sources */,
 				DBEC20A0235CAFAC0085BEAB /* ManagerAssembly.swift in Sources */,
+				DBE1581E236F58F00037B357 /* DrivingLicenseBackUploadViewModel.swift in Sources */,
+				DBE15806236EF3750037B357 /* Button.swift in Sources */,
+				DBE15818236F582D0037B357 /* DrivingLicenseInputDataViewController.swift in Sources */,
+				DBE1580C236F29900037B357 /* PersonalDataInputViewModel.swift in Sources */,
+				DBE15817236F582D0037B357 /* DrivingLicenseInputDataViewModel.swift in Sources */,
+				DBD8C1C823632A6E00902426 /* AccountDataInputViewController.swift in Sources */,
+				DBE15822236F5AED0037B357 /* DrivingLicenseFrontUploadViewModel.swift in Sources */,
+				DBE1581C236F58DE0037B357 /* DrivingLicenseBackUploadViewController.swift in Sources */,
+				DBE15824236F5D880037B357 /* UIViewController.swift in Sources */,
 				DBB7C8AE23535DF900DEBBB3 /* AppDelegate.swift in Sources */,
+				DBE15828236F5F4D0037B357 /* ProfileImageUploadViewModel.swift in Sources */,
+				DBD8C1CA23632A8200902426 /* AccountDataInputViewModel.swift in Sources */,
 				DBEC208C235C8D8F0085BEAB /* MultiMoyaProvider+Codable.swift in Sources */,
 				DBEC20A8235CC1660085BEAB /* LoginViewModel.swift in Sources */,
 				DBEC20A5235CB9700085BEAB /* LoginAPI.swift in Sources */,
@@ -531,6 +685,8 @@
 				DBEC2090235C92CB0085BEAB /* NetworkManager.swift in Sources */,
 				DBDA05B4235A06AE005026DF /* MultiMoyaProvider.swift in Sources */,
 				DBDA05B12359D9A0005026DF /* InteractorAssembly.swift in Sources */,
+				DBE1580A236F28580037B357 /* PersonalDataInputViewController.swift in Sources */,
+				DB72D935236EED4E0090B85C /* TextField.swift in Sources */,
 				DBDA05AF2359D94F005026DF /* NetworkAssembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -700,6 +856,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WU39KFDHQM;
 				INFOPLIST_FILE = CarRentingApplication/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -719,6 +876,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WU39KFDHQM;
 				INFOPLIST_FILE = CarRentingApplication/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (

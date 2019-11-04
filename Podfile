@@ -7,6 +7,9 @@ target 'CarRentingApplication' do
 
   # Pods for CarRentingApplication
 
+  # Action
+    pod ‘Action’, ‘3.11.0’
+  
   # Dependency injection
     pod 'Swinject', '2.6.2'
     pod 'SwinjectAutoregistration', '2.6.0'

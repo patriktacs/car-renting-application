@@ -10,7 +10,8 @@ import Foundation
 import Swinject
 
 class InteractorAssembly: Assembly {
+    
     func assemble(container: Container) {
-        
+        container.autoregister(RegistratingInteractor.self, initializer: RegisterInteractor.init).inObjectScope(.container)
     }
 }
