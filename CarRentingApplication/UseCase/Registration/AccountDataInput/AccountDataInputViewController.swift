@@ -60,11 +60,9 @@ class AccountDataInputViewController: UIViewController {
     }
     
     @IBAction func nextButtonAction(_ sender: Any) {
-        if inputValidation() {
-            let loginStoryboard = UIStoryboard(name: "Login", bundle: nil)
-            let personalDataInputViewController = loginStoryboard.instantiateViewController(withIdentifier: "PersonalDataInput")
-            self.navigationController?.pushViewController(personalDataInputViewController, animated: true)
-        }
+        let loginStoryboard = UIStoryboard(name: "Login", bundle: nil)
+        let personalDataInputViewController = loginStoryboard.instantiateViewController(withIdentifier: "PersonalDataInput")
+        self.navigationController?.pushViewController(personalDataInputViewController, animated: true)
     }
     
     func setupCancel() {
@@ -75,38 +73,6 @@ class AccountDataInputViewController: UIViewController {
     @objc func cancelRegistration(sender: UIBarButtonItem) {
         viewModel.cancelRegistration()
         self.navigationController?.popToRootViewController(animated: true)
-    }
-    
-    func inputValidation() -> Bool {
-        let emailRegexString = "[A-Z0-9a-z._-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-        let emailRegex = NSPredicate(format:"SELF MATCHES %@", emailRegexString)
-        let emailValidation = emailRegex.evaluate(with: emailTextField.text)
-        
-        let passwordRegexString = "(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[A-Z0-9a-z]{6,}"
-        let passwordRegex = NSPredicate(format:"SELF MATCHES %@", passwordRegexString)
-        let passwordValidation = passwordRegex.evaluate(with: passwordTextField.text)
-        
-        let repeatPasswordValidation = self.repeatPasswordtextField.text == self.passwordTextField.text
-        
-        if !emailValidation {
-            emailLabel.text = "Email format is 'someone@somewhere.com'"
-        } else {
-            emailLabel.text = " "
-        }
-        
-        if !passwordValidation {
-            passwordLabel.text = "At least 6 characters one upper, one lowercase letter and a number."
-        } else {
-            passwordLabel.text = " "
-        }
-        
-        if !repeatPasswordValidation {
-            repeatPasswordLabel.text = "Passwords doesn't match."
-        } else {
-            repeatPasswordLabel.text = " "
-        }
-        
-        return emailValidation && passwordValidation && repeatPasswordValidation
     }
     
     func setupInputValidation() {
@@ -121,7 +87,7 @@ class AccountDataInputViewController: UIViewController {
         let repeatPasswordEditEnd = repeatPasswordtextField.rx.controlEvent(.editingDidEnd).asObservable().startWith(())
         
         Observable.combineLatest(emailEditEnd, passwordEditEnd, repeatPasswordEditEnd)
-            .map { _, _, _ in
+            .map { _, _, _ -> Bool in
                 let emailValidation = emailRegex.evaluate(with: self.emailTextField.text) || self.emailTextField.text == ""
                 let passwordValidation = passwordRegex.evaluate(with: self.passwordTextField.text) || self.passwordTextField.text == ""
                 let repeatPasswordValidation = self.repeatPasswordtextField.text == self.passwordTextField.text || self.repeatPasswordtextField.text == ""
@@ -142,6 +108,9 @@ class AccountDataInputViewController: UIViewController {
                     self.repeatPasswordLabel.text = "Passwords doesn't match."
                 } else {
                     self.repeatPasswordLabel.text = " "
-        }}.subscribe().disposed(by: rx.disposeBag)
+                }
+                
+                return emailValidation && passwordValidation && repeatPasswordValidation && self.emailTextField.text != "" && self.passwordTextField.text != "" && self.repeatPasswordtextField.text != ""
+        }.bind(to: nextButton.rx.isEnabled).disposed(by: rx.disposeBag)
     }
 }

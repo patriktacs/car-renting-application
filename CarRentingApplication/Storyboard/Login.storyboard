@@ -240,7 +240,7 @@
                                     <action selector="nextButtonAction:" destination="uDL-c4-A9K" eventType="touchUpInside" id="WFh-ma-PzZ"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="vxy-uk-2vz">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="vxy-uk-2vz">
                                 <rect key="frame" x="16" y="363" width="382" height="170"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="uQx-2n-qHt">
@@ -318,9 +318,12 @@
                         <viewLayoutGuide key="safeArea" id="XSb-qN-pt7"/>
                     </view>
                     <connections>
+                        <outlet property="firstNameLabel" destination="9Bi-Zb-Evj" id="uT5-XF-tNd"/>
                         <outlet property="firstNameTextField" destination="ED7-gT-i9j" id="lyl-Tx-uxY"/>
+                        <outlet property="lastNameLabel" destination="qxu-XA-6k4" id="Kwg-ja-W5P"/>
                         <outlet property="lastNameTextField" destination="VRg-qY-jwf" id="Zeu-TC-2QZ"/>
                         <outlet property="nextButton" destination="0J4-5k-69H" id="oiJ-Ol-gbi"/>
+                        <outlet property="phoneLabel" destination="VZs-T4-DoI" id="2uj-xD-m0N"/>
                         <outlet property="phoneNumberTextField" destination="2BZ-AG-gBR" id="gnw-9b-gAr"/>
                     </connections>
                 </viewController>
