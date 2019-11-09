@@ -55,11 +55,18 @@ class LoginViewController: UIViewController, Notifiable {
                     self.present(dashboardMainController, animated: true, completion: nil)
                 }
             }, onError: { error in
-                guard let moyaError = error as? MoyaError else {
-                    return
+                if let moyaError = error as? MoyaError {
+                    if let response = moyaError.response {
+                        switch response.statusCode {
+                        case 401:
+                            self.showNotification("Login error", "Wrong email or password.")
+                        default:
+                            self.showNotification("Login error", "Unknown error.")
+                        }
+                    } else {
+                        self.showNotification("Login error", "Network error.")
+                    }
                 }
-                
-                self.showNotification("Login error", "Error " + String(moyaError.response!.statusCode))
             }).disposed(by: rx.disposeBag)
     }
     

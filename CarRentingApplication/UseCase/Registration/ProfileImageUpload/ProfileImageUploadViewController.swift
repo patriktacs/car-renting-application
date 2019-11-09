@@ -43,11 +43,22 @@ class ProfileImageUploadViewController: UIViewController, Notifiable {
                 self.showNotification("Registration", "Registration was successful!")
                 self.navigationController?.popToRootViewController(animated: true)
             }, onError: { error in
-                guard let moyaError = error as? MoyaError else {
-                    return
+                if let moyaError = error as? MoyaError {
+                    if let response = moyaError.response {
+                        switch response.statusCode {
+                        case 400:
+                            self.showNotification("Registration error", "Missing parameters.")
+                        case 200:
+                            self.showNotification("Registration", "Successful registration.")
+                        case 500:
+                            self.showNotification("Registration error", "Image size error.")
+                        default:
+                            self.showNotification("Registration error", "Unknown error.")
+                        }
+                    } else {
+                        self.showNotification("Registration error", "Network error.")
+                    }
                 }
-            
-                self.showNotification("Registration error", "Error " + String(moyaError.response!.statusCode) + " " + (String(data: moyaError.response!.data, encoding: .utf8) ?? ""))
             }).disposed(by: rx.disposeBag)
     }
     
@@ -85,6 +96,7 @@ extension ProfileImageUploadViewController: UIImagePickerControllerDelegate, UIN
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage
         profileImage.image = image
+        registerButton.isEnabled = true
         picker.dismiss(animated: true, completion: nil)
     }
     
