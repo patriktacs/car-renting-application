@@ -39,5 +39,4 @@ class PersonalDataInputViewModel: PersonalDataInputViewModelType {
     func cancelRegistration() {
         registerInteractor.cancelRegistration()
     }
-    
 }

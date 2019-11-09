@@ -26,8 +26,10 @@ class ProfileImageUploadViewController: UIViewController, Notifiable {
         
         titleLabel.text = "Profile image"
         titleLabel.textColor = .black
-        registerButton.setupData(title: "Register")
         profileImage.contentMode = .scaleAspectFill
+        
+        registerButton.setupData(title: "Register")
+        registerButton.isEnabled = false
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -55,6 +57,7 @@ class ProfileImageUploadViewController: UIViewController, Notifiable {
     }
     
     @objc func cancelRegistration(sender: UIBarButtonItem) {
+        viewModel.cancelRegistration()
         self.navigationController?.popToRootViewController(animated: true)
     }
     
@@ -70,6 +73,7 @@ class ProfileImageUploadViewController: UIViewController, Notifiable {
         
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
             imagePicker.sourceType = .camera
+            imagePicker.allowsEditing = true
             self.present(imagePicker, animated: true, completion: nil)
         } else {
             self.showNotification("Device error", "Camera not found.")
@@ -79,7 +83,7 @@ class ProfileImageUploadViewController: UIViewController, Notifiable {
 
 extension ProfileImageUploadViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+        let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage
         profileImage.image = image
         picker.dismiss(animated: true, completion: nil)
     }

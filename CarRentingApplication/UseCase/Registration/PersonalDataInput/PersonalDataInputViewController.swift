@@ -43,6 +43,7 @@ class PersonalDataInputViewController: UIViewController {
         lastNameTextField.delegate = self
         phoneNumberTextField.setupData(placeholder: "+36110000000")
         phoneNumberTextField.delegate = self
+        
         nextButton.setupData(title: "Next")
         
         (firstNameTextField.rx.text <-> viewModel.firstNameRelay).disposed(by: rx.disposeBag)

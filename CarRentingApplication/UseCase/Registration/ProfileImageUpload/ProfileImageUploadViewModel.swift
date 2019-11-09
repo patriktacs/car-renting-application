@@ -15,6 +15,7 @@ protocol ProfileImageUploadViewModelType {
     
     func setImage(image: UIImage)
     func register() -> Single<Response>
+    func cancelRegistration()
 }
 
 class ProfileImageUploadViewModel: ProfileImageUploadViewModelType {
@@ -31,5 +32,9 @@ class ProfileImageUploadViewModel: ProfileImageUploadViewModelType {
     
     func register() -> Single<Response> {
         registerInteractor.register()
+    }
+    
+    func cancelRegistration() {
+        registerInteractor.cancelRegistration()
     }
 }

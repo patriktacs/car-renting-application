@@ -9,9 +9,11 @@
 import UIKit
 import RxCocoa
 import RxBiBinding
+import RxSwift
 
 class DrivingLicenseInputDataViewController: UIViewController {
     
+    @IBOutlet weak var drivingLicenseLabel: UILabel!
     @IBOutlet weak var drivingLicenseNumberTextField: TextField!
     @IBOutlet weak var expirationDateTextField: TextField!
     @IBOutlet weak var nextButton: Button!
@@ -25,10 +27,17 @@ class DrivingLicenseInputDataViewController: UIViewController {
         
         setupCancel()
         setupDatePicker()
+        setupInputValidation()
         hideKeyboardWhenTappedAround()
         
+        drivingLicenseLabel.text = " "
+        drivingLicenseLabel.textColor = .red
+        
         drivingLicenseNumberTextField.setupData(placeholder: "Driving license number")
+        self.drivingLicenseNumberTextField.delegate = self
         expirationDateTextField.setupData(placeholder: "Expiration date")
+        self.expirationDateTextField.delegate = self
+        
         nextButton.setupData(title: "Next")
         
         (drivingLicenseNumberTextField.rx.text <-> viewModel.drivingLicenseNumberRelay).disposed(by: rx.disposeBag)
@@ -51,6 +60,7 @@ class DrivingLicenseInputDataViewController: UIViewController {
     }
     
     @objc func cancelRegistration(sender: UIBarButtonItem) {
+        viewModel.cancelRegistration()
         self.navigationController?.popToRootViewController(animated: true)
     }
     
@@ -67,5 +77,28 @@ class DrivingLicenseInputDataViewController: UIViewController {
         unformattedBehaviorRelay.accept(dateFormatter.string(from: sender.date))
         dateFormatter.dateFormat = "yyyy-MM-dd"
         expirationDateTextField.text = dateFormatter.string(from: sender.date)
+    }
+    
+    func setupInputValidation() {
+        let licenseRegexString = "[0-9]{8}"
+        let licenseRegex = NSPredicate(format:"SELF MATCHES %@", licenseRegexString)
+        
+        
+        let licenseEditEnd = drivingLicenseNumberTextField.rx.controlEvent(.editingDidEnd).asObservable().startWith(())
+        let expirationEditEnd = expirationDateTextField.rx.controlEvent(.editingDidEnd).asObservable().startWith(())
+        
+        Observable.combineLatest(licenseEditEnd, expirationEditEnd)
+            .map { _, _ -> Bool in
+                let licenseValidation = licenseRegex.evaluate(with: self.drivingLicenseNumberTextField.text) || self.drivingLicenseNumberTextField.text == ""
+                let expirationValidation = self.expirationDateTextField.text != ""
+                
+                if !licenseValidation {
+                    self.drivingLicenseLabel.text = "Driving license ID must contain 8 numbers."
+                } else {
+                    self.drivingLicenseLabel.text = " "
+                }
+                
+                return licenseValidation && expirationValidation
+        }.bind(to: self.nextButton.rx.isEnabled).disposed(by: rx.disposeBag)
     }
 }
