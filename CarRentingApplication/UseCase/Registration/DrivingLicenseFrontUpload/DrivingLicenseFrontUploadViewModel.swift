@@ -12,6 +12,7 @@ import UIKit
 protocol DrivingLicenseFrontUploadViewModelType {
     
     func setImage(image: UIImage)
+    func cancelRegistration()
 }
 
 class DrivingLicenseFrontUploadViewModel: DrivingLicenseFrontUploadViewModelType {
@@ -24,6 +25,10 @@ class DrivingLicenseFrontUploadViewModel: DrivingLicenseFrontUploadViewModelType
     
     func setImage(image: UIImage) {
         registerInteractor.setDrivingLicenceFrontImage(image: image)
+    }
+    
+    func cancelRegistration() {
+            registerInteractor.cancelRegistration()
     }
 }
 

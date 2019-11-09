@@ -6,9 +6,6 @@ target 'CarRentingApplication' do
   use_frameworks!
 
   # Pods for CarRentingApplication
-
-  # Action
-    pod ‘Action’, ‘3.11.0’
   
   # Dependency injection
     pod 'Swinject', '2.6.2'

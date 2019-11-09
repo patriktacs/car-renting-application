@@ -12,6 +12,7 @@ import UIKit
 protocol DrivingLicenseBackUploadViewModelType {
     
     func setImage(image: UIImage)
+    func cancelRegistration()
 }
 
 class DrivingLicenseBackUploadViewModel: DrivingLicenseBackUploadViewModelType {
@@ -24,5 +25,9 @@ class DrivingLicenseBackUploadViewModel: DrivingLicenseBackUploadViewModelType {
     
     func setImage(image: UIImage) {
         registerInteractor.setDrivingLicenceBackImage(image: image)
+    }
+    
+    func cancelRegistration() {
+        registerInteractor.cancelRegistration()
     }
 }

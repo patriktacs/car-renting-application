@@ -25,8 +25,10 @@ class DrivingLicenseBackUploadViewController: UIViewController, Notifiable {
         
         titleLabel.text = "Driving license back image"
         titleLabel.textColor = .black
-        nextButton.setupData(title: "Next")
         drivingLicenseBackImage.contentMode = .scaleAspectFill
+        
+        nextButton.setupData(title: "Next")
+        nextButton.isEnabled = false
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -46,6 +48,7 @@ class DrivingLicenseBackUploadViewController: UIViewController, Notifiable {
     }
     
     @objc func cancelRegistration(sender: UIBarButtonItem) {
+        viewModel.cancelRegistration()
         self.navigationController?.popToRootViewController(animated: true)
     }
     
@@ -61,6 +64,7 @@ class DrivingLicenseBackUploadViewController: UIViewController, Notifiable {
         
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
             imagePicker.sourceType = .camera
+            imagePicker.allowsEditing = true
             self.present(imagePicker, animated: true, completion: nil)
         } else {
             self.showNotification("Device error", "Camera not found.")
@@ -70,8 +74,9 @@ class DrivingLicenseBackUploadViewController: UIViewController, Notifiable {
 
 extension DrivingLicenseBackUploadViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+        let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage
         drivingLicenseBackImage.image = image
+        nextButton.isEnabled = true
         picker.dismiss(animated: true, completion: nil)
     }
     

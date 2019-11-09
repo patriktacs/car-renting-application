@@ -34,5 +34,4 @@ class DrivingLicenseInputDataViewModel: DrivingLicenseInputDataViewModelType {
     func cancelRegistration() {
             registerInteractor.cancelRegistration()
     }
-    
 }
