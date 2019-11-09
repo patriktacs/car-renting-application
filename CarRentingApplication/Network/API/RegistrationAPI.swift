@@ -18,7 +18,7 @@ extension RegistrationAPI: TargetType {
     var baseURL: URL {
         switch self {
         case .register:
-            return URL(string: "https://penzfeldobas.herokuapp.com")!
+            return URL(string: "http://ec2-3-14-28-216.us-east-2.compute.amazonaws.com")!
         }
     }
     
