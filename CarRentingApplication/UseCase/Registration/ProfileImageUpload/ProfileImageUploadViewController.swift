@@ -40,8 +40,8 @@ class ProfileImageUploadViewController: UIViewController, Notifiable {
         viewModel.setImage(image: profileImage.image ?? UIImage())
         viewModel.register()
             .subscribe(onSuccess: { _ in
-                self.showNotification("Registration", "Registration was successful!")
                 self.navigationController?.popToRootViewController(animated: true)
+                self.showNotification("Registration", "Registration was successful!")
             }, onError: { error in
                 if let moyaError = error as? MoyaError {
                     if let response = moyaError.response {

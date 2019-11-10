@@ -19,6 +19,15 @@
 		DBB7C8B823535E0400DEBBB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBB7C8B623535E0400DEBBB3 /* LaunchScreen.storyboard */; };
 		DBB7C8C323535E0500DEBBB3 /* CarRentingApplicationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB7C8C223535E0500DEBBB3 /* CarRentingApplicationTests.swift */; };
 		DBB7C8CE23535E0500DEBBB3 /* CarRentingApplicationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB7C8CD23535E0500DEBBB3 /* CarRentingApplicationUITests.swift */; };
+		DBBB82982378205800308A48 /* CarListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBB82972378205800308A48 /* CarListViewController.swift */; };
+		DBBB829A2378206C00308A48 /* CarListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBB82992378206C00308A48 /* CarListViewModel.swift */; };
+		DBBB829F23782C4000308A48 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBB829E23782C4000308A48 /* Car.swift */; };
+		DBBB82A123782CDC00308A48 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBB82A023782CDC00308A48 /* Station.swift */; };
+		DBBB82A323782D6800308A48 /* CarsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBB82A223782D6800308A48 /* CarsInteractor.swift */; };
+		DBBB82A523782F5C00308A48 /* CarsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBB82A423782F5C00308A48 /* CarsAPI.swift */; };
+		DBBB82AB2378354700308A48 /* CarsTableViewCellItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBB82AA2378354700308A48 /* CarsTableViewCellItemViewModel.swift */; };
+		DBBB82AE237836BF00308A48 /* CarsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBB82AC237836BF00308A48 /* CarsTableViewCell.swift */; };
+		DBBB82AF237836BF00308A48 /* CarsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBBB82AD237836BF00308A48 /* CarsTableViewCell.xib */; };
 		DBD8C1C823632A6E00902426 /* AccountDataInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD8C1C723632A6E00902426 /* AccountDataInputViewController.swift */; };
 		DBD8C1CA23632A8200902426 /* AccountDataInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD8C1C923632A8200902426 /* AccountDataInputViewModel.swift */; };
 		DBDA05AB2359D8D6005026DF /* ViewAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDA05AA2359D8D6005026DF /* ViewAssembly.swift */; };
@@ -91,6 +100,15 @@
 		DBB7C8C923535E0500DEBBB3 /* CarRentingApplicationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarRentingApplicationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBB7C8CD23535E0500DEBBB3 /* CarRentingApplicationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRentingApplicationUITests.swift; sourceTree = "<group>"; };
 		DBB7C8CF23535E0500DEBBB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBBB82972378205800308A48 /* CarListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListViewController.swift; sourceTree = "<group>"; };
+		DBBB82992378206C00308A48 /* CarListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListViewModel.swift; sourceTree = "<group>"; };
+		DBBB829E23782C4000308A48 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		DBBB82A023782CDC00308A48 /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
+		DBBB82A223782D6800308A48 /* CarsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsInteractor.swift; sourceTree = "<group>"; };
+		DBBB82A423782F5C00308A48 /* CarsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsAPI.swift; sourceTree = "<group>"; };
+		DBBB82AA2378354700308A48 /* CarsTableViewCellItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsTableViewCellItemViewModel.swift; sourceTree = "<group>"; };
+		DBBB82AC237836BF00308A48 /* CarsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsTableViewCell.swift; sourceTree = "<group>"; };
+		DBBB82AD237836BF00308A48 /* CarsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarsTableViewCell.xib; sourceTree = "<group>"; };
 		DBD8C1C723632A6E00902426 /* AccountDataInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDataInputViewController.swift; sourceTree = "<group>"; };
 		DBD8C1C923632A8200902426 /* AccountDataInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDataInputViewModel.swift; sourceTree = "<group>"; };
 		DBDA05AA2359D8D6005026DF /* ViewAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAssembly.swift; sourceTree = "<group>"; };
@@ -177,6 +195,7 @@
 		DB72D931236EECC60090B85C /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				DBBB82A223782D6800308A48 /* CarsInteractor.swift */,
 				DBE15829236F60FE0037B357 /* RegisterInteractor.swift */,
 			);
 			path = Interactor;
@@ -186,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				DBE15804236EF35F0037B357 /* UIButton */,
+				DBBB82A62378345B00308A48 /* UITableView */,
 				DB72D933236EED260090B85C /* UITextField */,
 			);
 			path = View;
@@ -227,6 +247,7 @@
 				DBDA05A92359D7E2005026DF /* Assembly */,
 				DBEC2097235C9EA80085BEAB /* Extension */,
 				DB72D931236EECC60090B85C /* Interactor */,
+				DBBB829B23782C2100308A48 /* Model */,
 				DBDA05B2235A0696005026DF /* Network */,
 				DBEC209C235CAAD50085BEAB /* Persistency */,
 				DBD8C1C42363159F00902426 /* Session */,
@@ -256,6 +277,58 @@
 				DBB7C8CF23535E0500DEBBB3 /* Info.plist */,
 			);
 			path = CarRentingApplicationUITests;
+			sourceTree = "<group>";
+		};
+		DBBB82952378203200308A48 /* Cars */ = {
+			isa = PBXGroup;
+			children = (
+				DBBB82962378204000308A48 /* CarList */,
+			);
+			path = Cars;
+			sourceTree = "<group>";
+		};
+		DBBB82962378204000308A48 /* CarList */ = {
+			isa = PBXGroup;
+			children = (
+				DBBB82972378205800308A48 /* CarListViewController.swift */,
+				DBBB82992378206C00308A48 /* CarListViewModel.swift */,
+			);
+			path = CarList;
+			sourceTree = "<group>";
+		};
+		DBBB829B23782C2100308A48 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DBBB829C23782C2D00308A48 /* Cars */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DBBB829C23782C2D00308A48 /* Cars */ = {
+			isa = PBXGroup;
+			children = (
+				DBBB829E23782C4000308A48 /* Car.swift */,
+				DBBB82A023782CDC00308A48 /* Station.swift */,
+			);
+			path = Cars;
+			sourceTree = "<group>";
+		};
+		DBBB82A62378345B00308A48 /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				DBBB82A72378346D00308A48 /* CarsTableViewCell */,
+			);
+			path = UITableView;
+			sourceTree = "<group>";
+		};
+		DBBB82A72378346D00308A48 /* CarsTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				DBBB82AC237836BF00308A48 /* CarsTableViewCell.swift */,
+				DBBB82AD237836BF00308A48 /* CarsTableViewCell.xib */,
+				DBBB82AA2378354700308A48 /* CarsTableViewCellItemViewModel.swift */,
+			);
+			path = CarsTableViewCell;
 			sourceTree = "<group>";
 		};
 		DBD8C1C42363159F00902426 /* Session */ = {
@@ -410,6 +483,7 @@
 		DBEC20A3235CB95F0085BEAB /* API */ = {
 			isa = PBXGroup;
 			children = (
+				DBBB82A423782F5C00308A48 /* CarsAPI.swift */,
 				DBEC20A4235CB9700085BEAB /* LoginAPI.swift */,
 				DB614B81236F92E6002EAF84 /* RegistrationAPI.swift */,
 			);
@@ -419,6 +493,7 @@
 		DBEC20A6235CC1530085BEAB /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
+				DBBB82952378203200308A48 /* Cars */,
 				DBEC20AB235CC7340085BEAB /* Login */,
 				DBD8C1C52363204F00902426 /* Registration */,
 			);
@@ -546,6 +621,7 @@
 				DBB7C8B523535E0400DEBBB3 /* Assets.xcassets in Resources */,
 				DB0A5EF2235CE8D300DB0225 /* Login.storyboard in Resources */,
 				DB9B128C235D00FE005F8F0A /* Dashboard.storyboard in Resources */,
+				DBBB82AF237836BF00308A48 /* CarsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -666,8 +742,12 @@
 				DBEC20AA235CC7310085BEAB /* LoginViewController.swift in Sources */,
 				DBEC20A0235CAFAC0085BEAB /* ManagerAssembly.swift in Sources */,
 				DBE1581E236F58F00037B357 /* DrivingLicenseBackUploadViewModel.swift in Sources */,
+				DBBB82A323782D6800308A48 /* CarsInteractor.swift in Sources */,
+				DBBB82A123782CDC00308A48 /* Station.swift in Sources */,
 				DBE15806236EF3750037B357 /* Button.swift in Sources */,
 				DBE15818236F582D0037B357 /* DrivingLicenseInputDataViewController.swift in Sources */,
+				DBBB82AE237836BF00308A48 /* CarsTableViewCell.swift in Sources */,
+				DBBB829F23782C4000308A48 /* Car.swift in Sources */,
 				DBE1580C236F29900037B357 /* PersonalDataInputViewModel.swift in Sources */,
 				DBE15817236F582D0037B357 /* DrivingLicenseInputDataViewModel.swift in Sources */,
 				DBD8C1C823632A6E00902426 /* AccountDataInputViewController.swift in Sources */,
@@ -676,17 +756,21 @@
 				DBE15824236F5D880037B357 /* UIViewController.swift in Sources */,
 				DBB7C8AE23535DF900DEBBB3 /* AppDelegate.swift in Sources */,
 				DBE15828236F5F4D0037B357 /* ProfileImageUploadViewModel.swift in Sources */,
+				DBBB82A523782F5C00308A48 /* CarsAPI.swift in Sources */,
 				DBD8C1CA23632A8200902426 /* AccountDataInputViewModel.swift in Sources */,
 				DBEC208C235C8D8F0085BEAB /* MultiMoyaProvider+Codable.swift in Sources */,
 				DBEC20A8235CC1660085BEAB /* LoginViewModel.swift in Sources */,
 				DBEC20A5235CB9700085BEAB /* LoginAPI.swift in Sources */,
 				DBEC2099235C9EBE0085BEAB /* Notifiable.swift in Sources */,
+				DBBB829A2378206C00308A48 /* CarListViewModel.swift in Sources */,
 				DBEC209E235CAB3D0085BEAB /* PersistencyManager.swift in Sources */,
 				DBEC2090235C92CB0085BEAB /* NetworkManager.swift in Sources */,
 				DBDA05B4235A06AE005026DF /* MultiMoyaProvider.swift in Sources */,
+				DBBB82982378205800308A48 /* CarListViewController.swift in Sources */,
 				DBDA05B12359D9A0005026DF /* InteractorAssembly.swift in Sources */,
 				DBE1580A236F28580037B357 /* PersonalDataInputViewController.swift in Sources */,
 				DB72D935236EED4E0090B85C /* TextField.swift in Sources */,
+				DBBB82AB2378354700308A48 /* CarsTableViewCellItemViewModel.swift in Sources */,
 				DBDA05AF2359D94F005026DF /* NetworkAssembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -863,7 +947,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = hu.patriktacs.CarRentingApplication;
+				PRODUCT_BUNDLE_IDENTIFIER = hu.patriktacs.CarRentingApplication2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -876,14 +960,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LH4H5THGYT;
+				DEVELOPMENT_TEAM = T6PUL3UJUS;
 				INFOPLIST_FILE = CarRentingApplication/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = hu.patriktacs.CarRentingApplication;
+				PRODUCT_BUNDLE_IDENTIFIER = hu.patriktacs.CarRentingApplication2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;

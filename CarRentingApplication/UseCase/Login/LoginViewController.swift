@@ -52,7 +52,8 @@ class LoginViewController: UIViewController, Notifiable {
             .subscribe(onSuccess: { _ in
                 let dashboardStoryboard = UIStoryboard(name: "Dashboard", bundle: nil)
                 if let dashboardMainController = dashboardStoryboard.instantiateInitialViewController() {
-                    self.present(dashboardMainController, animated: true, completion: nil)
+                    let appdelegate = UIApplication.shared.delegate as! AppDelegate
+                    appdelegate.window!.rootViewController = dashboardMainController
                 }
             }, onError: { error in
                 if let moyaError = error as? MoyaError {
