@@ -24,7 +24,7 @@ class CarsTableViewCell: UITableViewCell {
     }
     
     func setupData(_ data: CarsTableViewCellItemViewModel) {
-        engineTypeImage.image = UIImage(named: "electric")
+        engineTypeImage.image = UIImage(named: data.engineType?.lowercased() ?? "unknown")
         modelTypeLabel.text = (data.brand ?? "") + " " + (data.model ?? "")
         colorLabel.text = data.color ?? ""
         distanceLabel.text = String(data.currentKm ?? 0) + " Km"
