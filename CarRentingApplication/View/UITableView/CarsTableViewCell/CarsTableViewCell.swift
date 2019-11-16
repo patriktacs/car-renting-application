@@ -28,6 +28,8 @@ class CarsTableViewCell: UITableViewCell {
         modelTypeLabel.text = (data.brand ?? "") + " " + (data.model ?? "")
         colorLabel.text = data.color ?? ""
         distanceLabel.text = String(data.currentKm ?? 0) + " Km"
+        
+        self.selectionStyle = .none
     }
     
     override var intrinsicContentSize: CGSize {

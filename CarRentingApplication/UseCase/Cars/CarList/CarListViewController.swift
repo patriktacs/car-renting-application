@@ -8,12 +8,15 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 
 class CarListViewController: UIViewController {
     
     @IBOutlet weak var carListTableView: UITableView!
     
     var viewModel: CarListViewModelType!
+    
+    var cars: BehaviorRelay<[Car]> = BehaviorRelay<[Car]>(value: [])
     
     var pullToRefresh: UIRefreshControl = UIRefreshControl()
     
@@ -24,11 +27,14 @@ class CarListViewController: UIViewController {
         setupCell()
         setupTableView()
         setupPullToRefresh()
+        setupItemSelected()
         
-        viewModel.cars
+        viewModel.carItems
             .bind(to: carListTableView.rx.items(cellIdentifier: "carsTableViewCell", cellType: CarsTableViewCell.self)) { (row, element, cell) in
                 cell.setupData(element)
         }.disposed(by: rx.disposeBag)
+        
+        viewModel.cars.bind(to: cars).disposed(by: rx.disposeBag)
         
     }
     
@@ -73,6 +79,17 @@ class CarListViewController: UIViewController {
                 guard let self = self else { return }
                 self.pullToRefresh.endRefreshing()
             }).disposed(by: rx.disposeBag)
+    }
+    
+    func setupItemSelected() {
+        self.carListTableView.rx.itemSelected.subscribe(onNext: { indexPath in
+            let selectedCar = self.cars.value[indexPath.row]
+            self.viewModel.setCurrentCar(car: selectedCar)
+            
+            let dashboardStoryboard = UIStoryboard(name: "Dashboard", bundle: nil)
+            let carDetailsViewController = dashboardStoryboard.instantiateViewController(withIdentifier: "CarDetails")
+            self.navigationController?.pushViewController(carDetailsViewController, animated: true)
+        }).disposed(by: rx.disposeBag)
     }
 }
 

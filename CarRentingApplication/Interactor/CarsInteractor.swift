@@ -14,12 +14,15 @@ protocol CarInteractor {
     
     var carsRefreshRelay: BehaviorRelay<Void> { get }
     var cars: Observable<[Car]> { get }
+    var currentCar: Car { get set }
 }
 
 class CarsInteractor: CarInteractor {
     
     var carsRefreshRelay = BehaviorRelay<Void>(value:())
     var cars: Observable<[Car]>
+    
+    var currentCar: Car = Car()
     
     var networkManager: NetworkingManager!
     var sessionManager: SessioningManager!

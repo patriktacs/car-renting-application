@@ -52,5 +52,10 @@ class ViewAssembly: Assembly {
         container.storyboardInitCompleted(CarListViewController.self, initCompleted: { r,c in
             c.viewModel = r.resolve(CarListViewModelType.self)!
         })
+        
+        container.autoregister(CarDetailsViewModelType.self, initializer: CarDetailsViewModel.init)
+        container.storyboardInitCompleted(CarDetailsViewController.self, initCompleted: { r,c in
+            c.viewModel = r.resolve(CarDetailsViewModelType.self)!
+        })
     }
 }

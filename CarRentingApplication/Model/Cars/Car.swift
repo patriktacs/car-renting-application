@@ -10,10 +10,10 @@ import Foundation
 
 struct Car: Codable {
     var cardId: Int?
-    var licensePlate: String?
-    var distanceTravelled: Int?
+    var licencePlate: String?
+    var currentKm: Int?
     var brand: String?
-    var enginType: String?
+    var engineType: String?
     var model: String?
     var color: String?
     var state: String?
