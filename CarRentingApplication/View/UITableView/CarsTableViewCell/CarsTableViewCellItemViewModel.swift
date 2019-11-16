@@ -18,9 +18,9 @@ struct CarsTableViewCellItemViewModel {
     
     init(car: Car) {
         cardId = car.cardId
-        currentKm = car.distanceTravelled
+        currentKm = car.currentKm
         brand = car.brand
-        engineType = car.enginType
+        engineType = car.engineType
         model = car.model
         color = car.color
     }

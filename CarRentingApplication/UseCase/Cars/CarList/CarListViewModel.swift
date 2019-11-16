@@ -13,9 +13,11 @@ import RxCocoa
 protocol CarListViewModelType {
     
     var carsRefreshRelay: BehaviorRelay<Void> { get }
-    var cars: Observable<[CarsTableViewCellItemViewModel]> { get }
+    var carItems: Observable<[CarsTableViewCellItemViewModel]> { get }
+    var cars: Observable<[Car]> { get }
     
     func logout()
+    func setCurrentCar(car: Car)
 }
 
 class CarListViewModel: CarListViewModelType {
@@ -23,7 +25,11 @@ class CarListViewModel: CarListViewModelType {
     var carsRefreshRelay: BehaviorRelay<Void> {
         return carsInteractor.carsRefreshRelay
     }
-    var cars: Observable<[CarsTableViewCellItemViewModel]>
+    var carItems: Observable<[CarsTableViewCellItemViewModel]>
+    
+    var cars: Observable<[Car]> {
+        return carsInteractor.cars
+    }
     
     var sessionManager: SessioningManager!
     var carsInteractor: CarInteractor!
@@ -32,7 +38,7 @@ class CarListViewModel: CarListViewModelType {
         self.sessionManager = sessionManager
         self.carsInteractor = carsInteractor
         
-        self.cars = carsInteractor.cars.map {
+        self.carItems = carsInteractor.cars.map {
             var itemViewModels: [CarsTableViewCellItemViewModel] = []
             
             for car in $0 {
@@ -46,5 +52,9 @@ class CarListViewModel: CarListViewModelType {
     
     func logout() {
         sessionManager.killSession()
+    }
+    
+    func setCurrentCar(car: Car) {
+        carsInteractor.currentCar = car
     }
 }

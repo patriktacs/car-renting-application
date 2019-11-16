@@ -28,6 +28,8 @@
 		DBBB82AB2378354700308A48 /* CarsTableViewCellItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBB82AA2378354700308A48 /* CarsTableViewCellItemViewModel.swift */; };
 		DBBB82AE237836BF00308A48 /* CarsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBB82AC237836BF00308A48 /* CarsTableViewCell.swift */; };
 		DBBB82AF237836BF00308A48 /* CarsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBBB82AD237836BF00308A48 /* CarsTableViewCell.xib */; };
+		DBC2FFAB2380A02F00B7BBD5 /* CarDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC2FFAA2380A02F00B7BBD5 /* CarDetailsViewModel.swift */; };
+		DBC2FFAD2380AFEF00B7BBD5 /* CarDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC2FFAC2380AFEF00B7BBD5 /* CarDetailsViewController.swift */; };
 		DBD8C1C823632A6E00902426 /* AccountDataInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD8C1C723632A6E00902426 /* AccountDataInputViewController.swift */; };
 		DBD8C1CA23632A8200902426 /* AccountDataInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD8C1C923632A8200902426 /* AccountDataInputViewModel.swift */; };
 		DBDA05AB2359D8D6005026DF /* ViewAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDA05AA2359D8D6005026DF /* ViewAssembly.swift */; };
@@ -109,6 +111,8 @@
 		DBBB82AA2378354700308A48 /* CarsTableViewCellItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsTableViewCellItemViewModel.swift; sourceTree = "<group>"; };
 		DBBB82AC237836BF00308A48 /* CarsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsTableViewCell.swift; sourceTree = "<group>"; };
 		DBBB82AD237836BF00308A48 /* CarsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarsTableViewCell.xib; sourceTree = "<group>"; };
+		DBC2FFAA2380A02F00B7BBD5 /* CarDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailsViewModel.swift; sourceTree = "<group>"; };
+		DBC2FFAC2380AFEF00B7BBD5 /* CarDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailsViewController.swift; sourceTree = "<group>"; };
 		DBD8C1C723632A6E00902426 /* AccountDataInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDataInputViewController.swift; sourceTree = "<group>"; };
 		DBD8C1C923632A8200902426 /* AccountDataInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDataInputViewModel.swift; sourceTree = "<group>"; };
 		DBDA05AA2359D8D6005026DF /* ViewAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAssembly.swift; sourceTree = "<group>"; };
@@ -282,6 +286,7 @@
 		DBBB82952378203200308A48 /* Cars */ = {
 			isa = PBXGroup;
 			children = (
+				DBC2FFA723809FFA00B7BBD5 /* CarDetails */,
 				DBBB82962378204000308A48 /* CarList */,
 			);
 			path = Cars;
@@ -329,6 +334,15 @@
 				DBBB82AA2378354700308A48 /* CarsTableViewCellItemViewModel.swift */,
 			);
 			path = CarsTableViewCell;
+			sourceTree = "<group>";
+		};
+		DBC2FFA723809FFA00B7BBD5 /* CarDetails */ = {
+			isa = PBXGroup;
+			children = (
+				DBC2FFAC2380AFEF00B7BBD5 /* CarDetailsViewController.swift */,
+				DBC2FFAA2380A02F00B7BBD5 /* CarDetailsViewModel.swift */,
+			);
+			path = CarDetails;
 			sourceTree = "<group>";
 		};
 		DBD8C1C42363159F00902426 /* Session */ = {
@@ -740,6 +754,7 @@
 				DB614B82236F92E6002EAF84 /* RegistrationAPI.swift in Sources */,
 				DBE15820236F5ADB0037B357 /* DrivingLicenseFrontUploadViewController.swift in Sources */,
 				DBEC20AA235CC7310085BEAB /* LoginViewController.swift in Sources */,
+				DBC2FFAD2380AFEF00B7BBD5 /* CarDetailsViewController.swift in Sources */,
 				DBEC20A0235CAFAC0085BEAB /* ManagerAssembly.swift in Sources */,
 				DBE1581E236F58F00037B357 /* DrivingLicenseBackUploadViewModel.swift in Sources */,
 				DBBB82A323782D6800308A48 /* CarsInteractor.swift in Sources */,
@@ -766,6 +781,7 @@
 				DBEC209E235CAB3D0085BEAB /* PersistencyManager.swift in Sources */,
 				DBEC2090235C92CB0085BEAB /* NetworkManager.swift in Sources */,
 				DBDA05B4235A06AE005026DF /* MultiMoyaProvider.swift in Sources */,
+				DBC2FFAB2380A02F00B7BBD5 /* CarDetailsViewModel.swift in Sources */,
 				DBBB82982378205800308A48 /* CarListViewController.swift in Sources */,
 				DBDA05B12359D9A0005026DF /* InteractorAssembly.swift in Sources */,
 				DBE1580A236F28580037B357 /* PersonalDataInputViewController.swift in Sources */,
