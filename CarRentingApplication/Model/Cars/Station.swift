@@ -9,6 +9,8 @@
 import Foundation
 
 struct Station: Codable {
+    var stationId: Int?
     var longitude: Double?
     var latitude: Double?
+    var name: String?
 }
