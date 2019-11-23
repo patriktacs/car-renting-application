@@ -18,6 +18,7 @@ protocol CarDetailsViewModelType {
     var engineType: String { get }
     var longitude: Double { get }
     var latitude: Double { get }
+    var stationName: String { get }
 }
 
 class CarDetailsViewModel: CarDetailsViewModelType {
@@ -30,6 +31,7 @@ class CarDetailsViewModel: CarDetailsViewModelType {
     var engineType: String
     var longitude: Double
     var latitude: Double
+    var stationName: String
     
     var carsInteractor: CarInteractor!
     
@@ -44,5 +46,6 @@ class CarDetailsViewModel: CarDetailsViewModelType {
         self.engineType = carsInteractor.currentCar.engineType?.lowercased() ?? "unknown"
         self.longitude = carsInteractor.currentCar.station?.longitude ?? 0.0
         self.latitude = carsInteractor.currentCar.station?.latitude ?? 0.0
+        self.stationName = carsInteractor.currentCar.station?.name ?? ""
     }
 }

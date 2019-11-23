@@ -55,7 +55,7 @@ class CarDetailsViewController: UIViewController {
                                                   longitude: viewModel.longitude);
         let annotation = MKPointAnnotation();
         annotation.coordinate = coordinates;
-        annotation.title = viewModel.title + " | " + viewModel.licensePlate
+        annotation.title = viewModel.stationName
         locationMap.addAnnotation(annotation);
         
         locationMap.setCenter(coordinates, animated: true)
