@@ -263,15 +263,33 @@
                                     <constraint firstItem="ZB5-ic-ZIE" firstAttribute="top" secondItem="umG-HG-hiA" secondAttribute="top" id="xT5-46-XqC"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AaD-LR-Vbf" customClass="Button" customModule="CarRentingApplication" customModuleProvider="target">
+                                <rect key="frame" x="32" y="728" width="350" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="rentAction:" destination="HeK-I0-1xw" eventType="touchUpInside" id="TuE-YK-1gn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="AaD-LR-Vbf" firstAttribute="leading" secondItem="oPc-8H-d5e" secondAttribute="leading" constant="32" id="C7a-VM-tqt"/>
                             <constraint firstItem="umG-HG-hiA" firstAttribute="centerY" secondItem="tPF-qB-b1j" secondAttribute="centerY" id="FHf-NA-0k1"/>
                             <constraint firstItem="umG-HG-hiA" firstAttribute="leading" secondItem="oPc-8H-d5e" secondAttribute="leading" id="LBl-Oo-AJG"/>
+                            <constraint firstItem="oPc-8H-d5e" firstAttribute="bottom" secondItem="AaD-LR-Vbf" secondAttribute="bottom" constant="104" id="QQZ-Jh-Ieo"/>
+                            <constraint firstItem="oPc-8H-d5e" firstAttribute="trailing" secondItem="AaD-LR-Vbf" secondAttribute="trailing" constant="32" id="kNf-HG-sAJ"/>
                             <constraint firstItem="oPc-8H-d5e" firstAttribute="trailing" secondItem="umG-HG-hiA" secondAttribute="trailing" id="tjP-v3-rxq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oPc-8H-d5e"/>
                     </view>
+                    <connections>
+                        <outlet property="endDateTextField" destination="RUw-w6-22t" id="Fzd-bF-C3M"/>
+                        <outlet property="endStationPickerView" destination="dh5-rm-fg4" id="1Ij-sF-A5k"/>
+                        <outlet property="errorLabel" destination="ZB5-ic-ZIE" id="yIa-if-qSe"/>
+                        <outlet property="rentButton" destination="AaD-LR-Vbf" id="g9h-XN-fEC"/>
+                        <outlet property="startDateTextField" destination="2wY-NY-5jj" id="9PZ-9P-ccI"/>
+                        <outlet property="startStationPickerView" destination="CtM-YV-sfX" id="XN1-eH-CwM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y61-cZ-6xf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

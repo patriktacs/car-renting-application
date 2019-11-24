@@ -48,8 +48,6 @@ class ProfileImageUploadViewController: UIViewController, Notifiable {
                         switch response.statusCode {
                         case 400:
                             self.showNotification("Registration error", "Missing parameters.")
-                        case 200:
-                            self.showNotification("Registration", "Successful registration.")
                         case 500:
                             self.showNotification("Registration error", "Image size error.")
                         default:
