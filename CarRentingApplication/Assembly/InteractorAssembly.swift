@@ -14,5 +14,6 @@ class InteractorAssembly: Assembly {
     func assemble(container: Container) {
         container.autoregister(RegistratingInteractor.self, initializer: RegisterInteractor.init).inObjectScope(.container)
         container.autoregister(CarInteractor.self, initializer: CarsInteractor.init).inObjectScope(.container)
+        container.autoregister(RentingInteractor.self, initializer: RentsInteractor.init).inObjectScope(.container)
     }
 }
