@@ -24,7 +24,10 @@ class CarDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationItem.rightBarButtonItems = []
+        
         setupRent()
+        setupRentList()
         setupMap()
         
         engineTypeImage.image = UIImage(named: viewModel.engineType)
@@ -39,13 +42,28 @@ class CarDetailsViewController: UIViewController {
         self.navigationItem.title = viewModel.title
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationItem.title = "Details"
+    }
+    
     func setupRent() {
         let rentButton = UIBarButtonItem(title: "Rent", style: .plain, target: self, action: #selector(rent))
-        self.navigationItem.rightBarButtonItem = rentButton
+        self.navigationItem.rightBarButtonItems?.append(rentButton)
     }
     
     @objc func rent(sender: UIBarButtonItem) {
         
+    }
+    
+    func setupRentList() {
+        let rentListButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.bookmarks, target: self, action: #selector(rentList))
+        self.navigationItem.rightBarButtonItems?.append(rentListButton)
+    }
+    
+    @objc func rentList(sender: UIBarButtonItem) {
+        let dashboardStoryboard = UIStoryboard(name: "Dashboard", bundle: nil)
+        let carRentsViewController = dashboardStoryboard.instantiateViewController(withIdentifier: "CarRents")
+        self.navigationController?.pushViewController(carRentsViewController, animated: true)
     }
     
     func setupMap() {

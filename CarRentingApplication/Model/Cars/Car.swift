@@ -9,7 +9,7 @@
 import Foundation
 
 struct Car: Codable {
-    var cardId: Int?
+    var carId: Int?
     var licencePlate: String?
     var currentKm: Int?
     var brand: String?

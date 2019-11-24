@@ -31,8 +31,4 @@ class CarsTableViewCell: UITableViewCell {
         
         self.selectionStyle = .none
     }
-    
-    override var intrinsicContentSize: CGSize {
-        return CGSize(width: frame.width, height: 80.0)
-    }
 }
