@@ -52,7 +52,9 @@ class CarDetailsViewController: UIViewController {
     }
     
     @objc func rent(sender: UIBarButtonItem) {
-        
+        let dashboardStoryboard = UIStoryboard(name: "Dashboard", bundle: nil)
+        let rentCarViewController = dashboardStoryboard.instantiateViewController(withIdentifier: "RentCar")
+        self.navigationController?.pushViewController(rentCarViewController, animated: true)
     }
     
     func setupRentList() {

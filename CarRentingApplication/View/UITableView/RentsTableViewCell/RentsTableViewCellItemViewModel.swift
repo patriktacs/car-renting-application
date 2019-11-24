@@ -18,13 +18,14 @@ class RentsTableViewCellItemViewModel {
     
     init(rent: Rent) {
         let dateFormatterGet = DateFormatter()
-        dateFormatterGet.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        dateFormatterGet.dateFormat = "yyyy-MM-dd'T'HH:mm"
 
         let dateFormatterPrint = DateFormatter()
         dateFormatterPrint.dateFormat = "yyyy MMM dd"
         
         self.startStationId = rent.startStationId ?? 0
         self.endStationId = rent.endStationId ?? 0
+        
         self.plannedStartTime = dateFormatterPrint.string(from: dateFormatterGet.date(from: rent.plannedStartTime ?? "") ?? Date())
         self.plannedEndTime = dateFormatterPrint.string(from: dateFormatterGet.date(from: rent.plannedEndTime ?? "") ?? Date())
         self.isMine = rent.mine ?? false

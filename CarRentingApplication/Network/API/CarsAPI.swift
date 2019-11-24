@@ -12,6 +12,8 @@ import Moya
 enum CarsAPI {
     case getCars(token: String)
     case getCarRents(carId: String, token: String)
+    case getStations(token: String)
+    case postRent(startDate: String, endDate: String, startStationId: Int, endStationId: Int, carId: String, token: String)
 }
 
 extension CarsAPI: TargetType {
@@ -25,6 +27,10 @@ extension CarsAPI: TargetType {
             return "/cars"
         case .getCarRents(let carId, token: _):
             return "/cars/" + carId + "/rents"
+        case .getStations(token: _):
+            return "/stations"
+        case .postRent(startDate: _, endDate: _, startStationId: _, endStationId: _, let carId, token: _):
+            return "/cars/" + carId + "/reserve"
         }
     }
     
@@ -34,6 +40,10 @@ extension CarsAPI: TargetType {
             return .get
         case .getCarRents:
             return .get
+        case .getStations(token: _):
+            return .get
+        case .postRent:
+            return .post
         }
     }
     
@@ -42,7 +52,17 @@ extension CarsAPI: TargetType {
     }
     
     var task: Task {
-        return .requestPlain
+        switch self {
+        case .postRent(let startDate, let endDate, let startStationId, let endStationId, carId: _, token: _):
+            return .requestParameters(parameters:
+                ["StartDate": startDate,
+                 "EndDate": endDate,
+                 "StartStationId": startStationId,
+                 "EndStationId": endStationId],
+                encoding: URLEncoding.default)
+        default:
+            return .requestPlain
+        }
     }
     
     var headers: [String : String]? {
@@ -50,6 +70,10 @@ extension CarsAPI: TargetType {
         case .getCars(let token):
             return ["Authorization": "Basic " + token]
         case .getCarRents(carId: _ , let token):
+            return ["Authorization": "Basic " + token]
+        case .getStations(let token):
+            return ["Authorization": "Basic " + token]
+        case .postRent(startDate: _, endDate: _, startStationId: _, endStationId: _, carId: _, let token):
             return ["Authorization": "Basic " + token]
         }
     }
