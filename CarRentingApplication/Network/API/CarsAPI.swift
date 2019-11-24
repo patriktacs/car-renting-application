@@ -77,6 +77,4 @@ extension CarsAPI: TargetType {
             return ["Authorization": "Basic " + token]
         }
     }
-    
-    
 }

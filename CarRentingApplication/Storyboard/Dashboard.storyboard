@@ -19,6 +19,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="327-gw-GR0" kind="relationship" relationship="viewControllers" id="0bg-f0-mLe"/>
+                        <segue destination="GTX-3z-2bN" kind="relationship" relationship="viewControllers" id="XU9-xL-H7l"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ggs-dk-alB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -73,6 +74,56 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Py-PK-r72" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1" y="96"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="vFR-db-Is8">
+            <objects>
+                <navigationController id="GTX-3z-2bN" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="IKL-DI-L4w"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lkS-FA-bpj">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="DUp-sr-DaV" kind="relationship" relationship="rootViewController" id="wMJ-Gp-Kye"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kzP-5d-rcx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1059" y="780"/>
+        </scene>
+        <!--My Rents-->
+        <scene sceneID="WFE-r3-pkl">
+            <objects>
+                <viewController storyboardIdentifier="OwnRents" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DUp-sr-DaV" customClass="OwnRentsViewController" customModule="CarRentingApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MZz-mP-b3j">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DCf-a5-Ohr">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="DCf-a5-Ohr" secondAttribute="bottom" id="9Wo-gV-ve9"/>
+                            <constraint firstItem="DCf-a5-Ohr" firstAttribute="leading" secondItem="qaW-Vt-KbD" secondAttribute="leading" id="Wr2-vQ-Mjy"/>
+                            <constraint firstItem="DCf-a5-Ohr" firstAttribute="top" secondItem="qaW-Vt-KbD" secondAttribute="top" id="eel-x6-4vQ"/>
+                            <constraint firstItem="qaW-Vt-KbD" firstAttribute="trailing" secondItem="DCf-a5-Ohr" secondAttribute="trailing" id="qB0-7o-ght"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qaW-Vt-KbD"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="My Rents" image="book" catalog="system" id="RNO-1Y-C2q"/>
+                    <navigationItem key="navigationItem" id="HO2-mG-hVE"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="ownRentsTableView" destination="DCf-a5-Ohr" id="Ydc-Ae-PM1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jbc-Ex-hQ1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1" y="779"/>
         </scene>
         <!--Car Details View Controller-->
         <scene sceneID="nA4-5a-x1r">
@@ -297,6 +348,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="book" catalog="system" width="64" height="50"/>
         <image name="car" catalog="system" width="64" height="46"/>
     </resources>
 </document>
