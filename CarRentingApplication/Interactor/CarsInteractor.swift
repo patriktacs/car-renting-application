@@ -16,9 +16,10 @@ protocol CarInteractor {
     var cars: Observable<[Car]> { get }
     
     var rentsRefreshRelay: BehaviorRelay<Void> { get }
-    var rents: Observable<[Rent]> { get }
     
     var currentCar: Car { get set }
+    
+    func getRents() -> Observable<[Rent]>
 }
 
 class CarsInteractor: CarInteractor {
@@ -27,7 +28,6 @@ class CarsInteractor: CarInteractor {
     var cars: Observable<[Car]>
     
     var rentsRefreshRelay = BehaviorRelay<Void>(value: ())
-    var rents: Observable<[Rent]>
     
     var currentCar: Car = Car()
     
@@ -41,10 +41,11 @@ class CarsInteractor: CarInteractor {
         self.cars = carsRefreshRelay.flatMapLatest({ _ -> Single<[Car]> in
             return networkManager.provider.requestDecoded(CarsAPI.getCars(token: sessionManager.token))
         }).share(replay: 1, scope: .forever)
-        
-        let car = currentCar
-        self.rents = carsRefreshRelay.flatMapLatest({ _ -> Single<[Rent]> in
-            return networkManager.provider.requestDecoded(CarsAPI.getCarRents(carId: String(car.cardId ?? 0), token: sessionManager.token))
+    }
+    
+    func getRents() -> Observable<[Rent]> {
+        return rentsRefreshRelay.flatMapLatest({ _ -> Single<[Rent]> in
+            return self.networkManager.provider.requestDecoded(CarsAPI.getCarRents(carId: String(self.currentCar.carId ?? 1), token: self.sessionManager.token))
         }).share(replay: 1, scope: .forever)
     }
 }

@@ -18,9 +18,15 @@ class RentsTableViewCell: UITableViewCell {
         super.awakeFromNib()
     }
     
-    func setupData(rent: Rent) {
-        self.departureLabel.text = "Departure: " + String(rent.startStationId ?? 0)
-        self.arrivalLabel.text = "Arrival: " + String(rent.endStationId ?? 0)
-        self.intervalLabel.text = (rent.plannedStartTime ?? "") + " - " + (rent.plannedEndTime ?? "")
+    func setupData(rent: RentsTableViewCellItemViewModel) {
+        self.departureLabel.text = "Departure: " + String(rent.startStationId)
+        self.arrivalLabel.text = "Arrival: " + String(rent.endStationId)
+        self.intervalLabel.text = rent.plannedStartTime + " - " + rent.plannedEndTime
+        
+        if rent.isMine {
+            self.backgroundView?.backgroundColor = .green
+        }
+        
+        self.selectionStyle = .none
     }
 }

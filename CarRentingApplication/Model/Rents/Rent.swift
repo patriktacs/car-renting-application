@@ -19,6 +19,6 @@ struct Rent: Codable {
     var actualEndTime: String?
     var state: String?
     var mine: Bool?
-    var imageIdsBefore: [Int]
-    var imageIdsAfter: [Int]
+    var imageIdsBefore: [Int]?
+    var imageIdsAfter: [Int]?
 }

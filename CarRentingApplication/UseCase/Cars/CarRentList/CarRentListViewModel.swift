@@ -7,13 +7,37 @@
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
 
 protocol CarRentListViewModelType {
+    
+    var rentsRefreshRelay: BehaviorRelay<Void> { get }
+    var rentItems: Observable<[RentsTableViewCellItemViewModel]> { get }
 }
 
 class CarRentListViewModel: CarRentListViewModelType {
     
-    init() {
+    var rentsRefreshRelay: BehaviorRelay<Void> {
+        return carsInteractor.rentsRefreshRelay
+    }
+    var rentItems: Observable<[RentsTableViewCellItemViewModel]>
+    
+    var carsInteractor: CarInteractor!
+    
+    init(carsInteractor: CarInteractor) {
+        self.carsInteractor = carsInteractor
         
+        self.rentItems = carsInteractor.getRents().map { rents -> [RentsTableViewCellItemViewModel] in
+                var itemViewModels: [RentsTableViewCellItemViewModel] = []
+
+                for rent in rents {
+                    if rent.state == "RESERVED" {
+                        itemViewModels.append(RentsTableViewCellItemViewModel(rent: rent))
+                    }
+                }
+                
+                return itemViewModels
+        }
     }
 }

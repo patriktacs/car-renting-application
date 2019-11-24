@@ -17,7 +17,7 @@ struct CarsTableViewCellItemViewModel {
     var color: String?
     
     init(car: Car) {
-        cardId = car.cardId
+        cardId = car.carId
         currentKm = car.currentKm
         brand = car.brand
         engineType = car.engineType
