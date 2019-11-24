@@ -14,6 +14,8 @@ protocol CarRentListViewModelType {
     
     var rentsRefreshRelay: BehaviorRelay<Void> { get }
     var rentItems: Observable<[RentsTableViewCellItemViewModel]> { get }
+    
+    var carName: String { get }
 }
 
 class CarRentListViewModel: CarRentListViewModelType {
@@ -22,6 +24,8 @@ class CarRentListViewModel: CarRentListViewModelType {
         return carsInteractor.rentsRefreshRelay
     }
     var rentItems: Observable<[RentsTableViewCellItemViewModel]>
+    
+    var carName: String
     
     var carsInteractor: CarInteractor!
     
@@ -39,5 +43,7 @@ class CarRentListViewModel: CarRentListViewModelType {
                 
                 return itemViewModels
         }
+        
+        self.carName = (carsInteractor.currentCar.brand ?? "") + " " + (carsInteractor.currentCar.model ?? "")
     }
 }

@@ -31,7 +31,7 @@ class CarRentListViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
+        self.navigationItem.title = "Rents for " + viewModel.carName
     }
     
     func setupCell() {
