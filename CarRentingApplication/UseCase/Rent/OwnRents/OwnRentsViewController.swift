@@ -36,12 +36,21 @@ class OwnRentsViewController: UIViewController {
         }.disposed(by: rx.disposeBag)
         
         viewModel.rents.bind(to: rents).disposed(by: rx.disposeBag)
+        
+        viewModel.isLocationNeeded.subscribe(onNext: { needed in
+            if needed {
+                let dashboardStoryboard = UIStoryboard(name: "Dashboard", bundle: nil)
+                let positionProviderViewController = dashboardStoryboard.instantiateViewController(withIdentifier: "PositionProvider")
+                self.navigationController?.pushViewController(positionProviderViewController, animated: true)
+            }
+        }).disposed(by: rx.disposeBag)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationItem.title = "My Rents"
         
+        self.viewModel.iLNRelay.accept(())
         self.viewModel.ownRentsRefreshRelay.accept(())
     }
     

@@ -18,6 +18,9 @@ protocol CarInteractor {
     
     var rentsRefreshRelay: BehaviorRelay<Void> { get }
     
+    var ownRentsRefreshRelay: PublishRelay<Void> { get }
+    var ownRents: Observable<[Rent]> { get }
+    
     var stations: Observable<[Station]> { get }
     
     var currentCar: Car { get set }
@@ -38,6 +41,9 @@ class CarsInteractor: CarInteractor {
     
     var rentsRefreshRelay = BehaviorRelay<Void>(value: ())
     
+    var ownRentsRefreshRelay = PublishRelay<Void>()
+    var ownRents: Observable<[Rent]>
+    
     var stations: Observable<[Station]>
     
     var currentCar: Car = Car()
@@ -56,6 +62,10 @@ class CarsInteractor: CarInteractor {
         
         self.cars = carsRefreshRelay.flatMapLatest({ _ -> Single<[Car]> in
             return networkManager.provider.requestDecoded(CarsAPI.getCars(token: sessionManager.token))
+        }).share(replay: 1, scope: .forever)
+        
+        self.ownRents = ownRentsRefreshRelay.flatMapLatest({ _ -> Single<[Rent]> in
+            return networkManager.provider.requestDecoded(RentsAPI.getRents(token: sessionManager.token))
         }).share(replay: 1, scope: .forever)
         
         self.stations = networkManager.provider.requestDecoded(CarsAPI.getStations(token: sessionManager.token)).asObservable()

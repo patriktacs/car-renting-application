@@ -16,6 +16,9 @@ protocol CarListViewModelType {
     var carItems: Observable<[CarsTableViewCellItemViewModel]> { get }
     var cars: Observable<[Car]> { get }
     
+    var iLNRelay: PublishRelay<Void> { get }
+    var isLocationNeeded: Observable<Bool> { get }
+    
     func logout()
     func setCurrentCar(car: Car)
 }
@@ -30,6 +33,11 @@ class CarListViewModel: CarListViewModelType {
     var cars: Observable<[Car]> {
         return carsInteractor.cars
     }
+    
+    var iLNRelay: PublishRelay<Void> {
+        return carsInteractor.ownRentsRefreshRelay
+    }
+    var isLocationNeeded: Observable<Bool>
     
     var sessionManager: SessioningManager!
     var carsInteractor: CarInteractor!
@@ -47,6 +55,19 @@ class CarListViewModel: CarListViewModelType {
             }
             
             return itemViewModels
+        }
+        
+        self.isLocationNeeded = carsInteractor.ownRents
+            .map { rents in
+                var needed = false
+                
+                for rent in rents {
+                    if (rent.positionReportRequested ?? false) {
+                        needed = true
+                    }
+                }
+                
+                return needed
         }
     }
     

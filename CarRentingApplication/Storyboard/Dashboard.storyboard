@@ -92,6 +92,67 @@
             </objects>
             <point key="canvasLocation" x="-1059" y="780"/>
         </scene>
+        <!--Position Provider View Controller-->
+        <scene sceneID="NkN-ep-wFK">
+            <objects>
+                <viewController storyboardIdentifier="PositionProvider" useStoryboardIdentifierAsRestorationIdentifier="YES" id="k6z-9O-ARz" customClass="PositionProviderViewController" customModule="CarRentingApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2gB-oZ-x5G">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L9P-CB-79k">
+                                <rect key="frame" x="16" y="126" width="382" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hi3-Gz-B53">
+                                <rect key="frame" x="32" y="178.5" width="57" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="B1a-g8-OCV">
+                                <rect key="frame" x="32" y="215.5" width="350" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="ulI-JY-HE8"/>
+                                </constraints>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8n9-Sn-3OJ" customClass="Button" customModule="CarRentingApplication" customModuleProvider="target">
+                                <rect key="frame" x="32" y="788" width="350" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="getPosition:" destination="k6z-9O-ARz" eventType="touchUpInside" id="4lD-3N-tAu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Hi3-Gz-B53" firstAttribute="leading" secondItem="5se-vB-9am" secondAttribute="leading" constant="32" id="9Ci-hd-ms9"/>
+                            <constraint firstItem="5se-vB-9am" firstAttribute="bottom" secondItem="8n9-Sn-3OJ" secondAttribute="bottom" constant="44" id="CLc-nu-1Um"/>
+                            <constraint firstItem="B1a-g8-OCV" firstAttribute="top" secondItem="Hi3-Gz-B53" secondAttribute="bottom" constant="8" id="CV4-h6-TA4"/>
+                            <constraint firstItem="5se-vB-9am" firstAttribute="trailing" secondItem="L9P-CB-79k" secondAttribute="trailing" constant="16" id="K2L-nI-ikD"/>
+                            <constraint firstItem="L9P-CB-79k" firstAttribute="top" secondItem="5se-vB-9am" secondAttribute="top" constant="82" id="YJb-lk-4k1"/>
+                            <constraint firstItem="5se-vB-9am" firstAttribute="trailing" secondItem="B1a-g8-OCV" secondAttribute="trailing" constant="32" id="Yv3-vN-A09"/>
+                            <constraint firstItem="B1a-g8-OCV" firstAttribute="leading" secondItem="5se-vB-9am" secondAttribute="leading" constant="32" id="aW2-fU-oee"/>
+                            <constraint firstItem="8n9-Sn-3OJ" firstAttribute="leading" secondItem="5se-vB-9am" secondAttribute="leading" constant="32" id="cDH-gY-f8G"/>
+                            <constraint firstItem="L9P-CB-79k" firstAttribute="leading" secondItem="5se-vB-9am" secondAttribute="leading" constant="16" id="me0-Lr-VgS"/>
+                            <constraint firstItem="Hi3-Gz-B53" firstAttribute="top" secondItem="L9P-CB-79k" secondAttribute="bottom" constant="32" id="oNZ-aP-8nh"/>
+                            <constraint firstItem="5se-vB-9am" firstAttribute="trailing" secondItem="8n9-Sn-3OJ" secondAttribute="trailing" constant="32" id="uhU-Ui-d7f"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5se-vB-9am"/>
+                    </view>
+                    <connections>
+                        <outlet property="currentPositionLabel" destination="Hi3-Gz-B53" id="c43-zg-kvt"/>
+                        <outlet property="map" destination="B1a-g8-OCV" id="UCA-ZF-AWO"/>
+                        <outlet property="sendButton" destination="8n9-Sn-3OJ" id="hH6-mN-Csd"/>
+                        <outlet property="textLabel" destination="L9P-CB-79k" id="KL3-yy-ihl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uak-p8-7xj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1059" y="1505"/>
+        </scene>
         <!--My Rents-->
         <scene sceneID="WFE-r3-pkl">
             <objects>

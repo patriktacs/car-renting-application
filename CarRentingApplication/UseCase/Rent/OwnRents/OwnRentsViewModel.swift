@@ -17,6 +17,9 @@ protocol OwnRentsViewModelType {
     
     var rents: Observable<[Rent]> { get }
     
+    var iLNRelay: PublishRelay<Void> { get }
+    var isLocationNeeded: Observable<Bool> { get }
+    
     func logout()
     func setCurrentRent(rent: Rent)
 }
@@ -31,6 +34,11 @@ class OwnRentsViewModel: OwnRentsViewModelType {
     var rents: Observable<[Rent]> {
         return rentsInteractor.ownRents
     }
+    
+    var iLNRelay: PublishRelay<Void> {
+        return rentsInteractor.rentsRefreshRelay
+    }
+    var isLocationNeeded: Observable<Bool>
     
     var rentsInteractor: RentingInteractor!
     var sessionManager: SessioningManager!
@@ -48,6 +56,19 @@ class OwnRentsViewModel: OwnRentsViewModelType {
                 }
                 
                 return ownRentItems
+        }
+        
+        self.isLocationNeeded = rentsInteractor.rents
+            .map { rents in
+                var needed = false
+                
+                for rent in rents {
+                    if (rent.positionReportRequested ?? false) {
+                        needed = true
+                    }
+                }
+                
+                return needed
         }
     }
     
