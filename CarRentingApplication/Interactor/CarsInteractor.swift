@@ -68,13 +68,6 @@ class CarsInteractor: CarInteractor {
     }
     
     func rent() -> Single<Response> {
-        print(startDateRelay.value ?? "")
-        print(endDateRelay.value ?? "")
-        print(startStation.stationId ?? 0)
-        print(endStation.stationId ?? 0)
-        print(String(currentCar.carId ?? 1))
-        print(sessionManager.token)
-        
         return self.networkManager.provider.rx.request(MultiTarget(CarsAPI.postRent(startDate: startDateRelay.value ?? "", endDate: endDateRelay.value ?? "", startStationId: startStation.stationId ?? 0, endStationId: endStation.stationId ?? 0, carId: String(currentCar.carId ?? 1), token: sessionManager.token )))
             .filterSuccessfulStatusCodes()
     }

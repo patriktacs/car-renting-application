@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class CarListViewController: UIViewController {
+class CarListViewController: UIViewController, UITabBarControllerDelegate {
     
     @IBOutlet weak var carListTableView: UITableView!
     
@@ -35,11 +35,11 @@ class CarListViewController: UIViewController {
         }.disposed(by: rx.disposeBag)
         
         viewModel.cars.bind(to: cars).disposed(by: rx.disposeBag)
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationItem.title = "Cars"
+        self.viewModel.carsRefreshRelay.accept(())
     }
     
     func setupLogout() {

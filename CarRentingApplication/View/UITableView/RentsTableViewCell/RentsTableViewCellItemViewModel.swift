@@ -10,8 +10,8 @@ import Foundation
 
 class RentsTableViewCellItemViewModel {
     
-    var startStationId: Int
-    var endStationId: Int
+    var startStationName: String
+    var endStationName: String
     var plannedStartTime: String
     var plannedEndTime: String
     var isMine: Bool
@@ -23,11 +23,11 @@ class RentsTableViewCellItemViewModel {
         let dateFormatterPrint = DateFormatter()
         dateFormatterPrint.dateFormat = "yyyy MMM dd"
         
-        self.startStationId = rent.startStationId ?? 0
-        self.endStationId = rent.endStationId ?? 0
+        self.startStationName = rent.startStationName ?? ""
+        self.endStationName = rent.endStationName ?? ""
         
-        self.plannedStartTime = dateFormatterPrint.string(from: dateFormatterGet.date(from: rent.plannedStartTime ?? "") ?? Date())
-        self.plannedEndTime = dateFormatterPrint.string(from: dateFormatterGet.date(from: rent.plannedEndTime ?? "") ?? Date())
+        self.plannedStartTime = (rent.actualStartTime?.isEmpty ?? true) ? dateFormatterPrint.string(from: dateFormatterGet.date(from: rent.plannedStartTime ?? "") ?? Date()) : dateFormatterPrint.string(from: dateFormatterGet.date(from: rent.actualStartTime ?? "") ?? Date())
+        self.plannedEndTime = (rent.actualEndTime?.isEmpty ?? true) ? dateFormatterPrint.string(from: dateFormatterGet.date(from: rent.plannedEndTime ?? "") ?? Date()) : dateFormatterPrint.string(from: dateFormatterGet.date(from: rent.actualEndTime ?? "") ?? Date())
         self.isMine = rent.mine ?? false
     }
 }

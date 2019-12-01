@@ -66,8 +66,13 @@ class RentCarViewController: UIViewController, Notifiable {
         (endDateBehaviorRelay <-> viewModel.endDateRelay).disposed(by: rx.disposeBag)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationItem.title = "Rent car"
+    }
+    
     @IBAction func rentAction(_ sender: Any) {
         viewModel.rent().subscribe(onSuccess: { response in
+            self.navigationController?.popViewController(animated: true)
             self.showNotification("Renting", "Renting was successful!")
         }, onError: { error in
             if let moyaError = error as? MoyaError {

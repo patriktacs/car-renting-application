@@ -125,6 +125,104 @@
             </objects>
             <point key="canvasLocation" x="-1" y="779"/>
         </scene>
+        <!--Own Rent Details View Controller-->
+        <scene sceneID="Cey-6G-FBT">
+            <objects>
+                <viewController storyboardIdentifier="OwnRentDetails" useStoryboardIdentifierAsRestorationIdentifier="YES" id="67Q-UW-uWP" customClass="OwnRentDetailsViewController" customModule="CarRentingApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="os4-L0-Yqt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="InD-0h-Isb">
+                                <rect key="frame" x="32" y="76" width="68" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="68" id="E0M-td-a2S"/>
+                                    <constraint firstAttribute="width" secondItem="InD-0h-Isb" secondAttribute="height" multiplier="1:1" id="NUo-Td-MCy"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clQ-dl-Egz">
+                                <rect key="frame" x="108" y="95.5" width="57" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7HI-Eb-iF1">
+                                <rect key="frame" x="32" y="176" width="40" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IfQ-Kd-Shn">
+                                <rect key="frame" x="342.5" y="176.5" width="39.5" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2y9-s9-foJ">
+                                <rect key="frame" x="32" y="200" width="39.5" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZP-79-aWx">
+                                <rect key="frame" x="342" y="200" width="40" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PxU-Ry-43D" customClass="Button" customModule="CarRentingApplication" customModuleProvider="target">
+                                <rect key="frame" x="32" y="788" width="350" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="cancelAction:" destination="67Q-UW-uWP" eventType="touchUpInside" id="9o4-CM-IFI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5WN-hM-gup" customClass="Button" customModule="CarRentingApplication" customModuleProvider="target">
+                                <rect key="frame" x="32" y="750" width="350" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="mainActionButton:" destination="67Q-UW-uWP" eventType="touchUpInside" id="xkh-FP-NCa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="7HI-Eb-iF1" firstAttribute="leading" secondItem="3NW-ZA-tvy" secondAttribute="leading" constant="32" id="8Cc-Hp-0lv"/>
+                            <constraint firstItem="PxU-Ry-43D" firstAttribute="top" secondItem="5WN-hM-gup" secondAttribute="bottom" constant="8" id="AoH-cI-skh"/>
+                            <constraint firstItem="2y9-s9-foJ" firstAttribute="leading" secondItem="3NW-ZA-tvy" secondAttribute="leading" constant="32" id="B6s-Cm-j4B"/>
+                            <constraint firstItem="PxU-Ry-43D" firstAttribute="leading" secondItem="3NW-ZA-tvy" secondAttribute="leading" constant="32" id="B8J-Aa-NPg"/>
+                            <constraint firstItem="5WN-hM-gup" firstAttribute="leading" secondItem="3NW-ZA-tvy" secondAttribute="leading" constant="32" id="JbN-x1-D5D"/>
+                            <constraint firstItem="InD-0h-Isb" firstAttribute="leading" secondItem="3NW-ZA-tvy" secondAttribute="leading" constant="32" id="L7J-SC-w4e"/>
+                            <constraint firstItem="3NW-ZA-tvy" firstAttribute="trailing" secondItem="5WN-hM-gup" secondAttribute="trailing" constant="32" id="OxU-BV-LAK"/>
+                            <constraint firstItem="NZP-79-aWx" firstAttribute="centerY" secondItem="2y9-s9-foJ" secondAttribute="centerY" id="Tdo-bL-SPT"/>
+                            <constraint firstItem="clQ-dl-Egz" firstAttribute="centerY" secondItem="InD-0h-Isb" secondAttribute="centerY" id="Tm6-gd-N8H"/>
+                            <constraint firstItem="3NW-ZA-tvy" firstAttribute="trailing" secondItem="NZP-79-aWx" secondAttribute="trailing" constant="32" id="USN-WO-KCr"/>
+                            <constraint firstItem="3NW-ZA-tvy" firstAttribute="bottom" secondItem="PxU-Ry-43D" secondAttribute="bottom" constant="44" id="WO3-gQ-Bbc"/>
+                            <constraint firstItem="3NW-ZA-tvy" firstAttribute="trailing" secondItem="PxU-Ry-43D" secondAttribute="trailing" constant="32" id="fHF-ik-fxB"/>
+                            <constraint firstItem="clQ-dl-Egz" firstAttribute="leading" secondItem="InD-0h-Isb" secondAttribute="trailing" constant="8" id="h2j-2X-6bW"/>
+                            <constraint firstItem="InD-0h-Isb" firstAttribute="top" secondItem="3NW-ZA-tvy" secondAttribute="top" constant="32" id="nMJ-Zf-pJ1"/>
+                            <constraint firstItem="7HI-Eb-iF1" firstAttribute="top" secondItem="InD-0h-Isb" secondAttribute="bottom" constant="32" id="pW7-z6-lBy"/>
+                            <constraint firstItem="3NW-ZA-tvy" firstAttribute="trailing" secondItem="IfQ-Kd-Shn" secondAttribute="trailing" constant="32" id="riy-ho-Psw"/>
+                            <constraint firstItem="IfQ-Kd-Shn" firstAttribute="centerY" secondItem="7HI-Eb-iF1" secondAttribute="centerY" id="yBj-Pt-zSq"/>
+                            <constraint firstItem="2y9-s9-foJ" firstAttribute="top" secondItem="7HI-Eb-iF1" secondAttribute="bottom" constant="4" id="zFZ-gX-5ri"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3NW-ZA-tvy"/>
+                    </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="PxU-Ry-43D" id="omu-gy-ATQ"/>
+                        <outlet property="carLabel" destination="clQ-dl-Egz" id="9Af-TE-FoB"/>
+                        <outlet property="endDateLabel" destination="NZP-79-aWx" id="Xfj-bf-Crl"/>
+                        <outlet property="endStationLabel" destination="2y9-s9-foJ" id="RrK-f3-Cho"/>
+                        <outlet property="mainButton" destination="5WN-hM-gup" id="6hA-gJ-JRE"/>
+                        <outlet property="startDateLabel" destination="IfQ-Kd-Shn" id="rlz-fo-hCC"/>
+                        <outlet property="startStationLabel" destination="7HI-Eb-iF1" id="I5b-xD-sZy"/>
+                        <outlet property="stateImageView" destination="InD-0h-Isb" id="rWL-jZ-0Ee"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lrL-3A-zax" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="926" y="779"/>
+        </scene>
         <!--Car Details View Controller-->
         <scene sceneID="nA4-5a-x1r">
             <objects>
@@ -167,14 +265,14 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZyE-zo-LZX">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZyE-zo-LZX">
                                         <rect key="frame" x="32" y="220" width="350" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="EY2-iF-wEN">
-                                        <rect key="frame" x="32" y="276" width="350" height="300"/>
+                                        <rect key="frame" x="32" y="252" width="350" height="300"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="300" id="Huc-UY-A4i"/>
                                         </constraints>
@@ -196,7 +294,7 @@
                                     <constraint firstItem="hjR-X7-Re2" firstAttribute="leading" secondItem="dHJ-21-goO" secondAttribute="leading" id="hlR-J4-djK"/>
                                     <constraint firstItem="ZyE-zo-LZX" firstAttribute="leading" secondItem="xzN-eR-4CN" secondAttribute="leading" constant="32" id="joT-Bh-QlZ"/>
                                     <constraint firstItem="QMt-Uz-tIg" firstAttribute="leading" secondItem="hjR-X7-Re2" secondAttribute="leading" id="pS8-GP-vFI"/>
-                                    <constraint firstItem="EY2-iF-wEN" firstAttribute="top" secondItem="ZyE-zo-LZX" secondAttribute="bottom" constant="32" id="s79-hL-A3H"/>
+                                    <constraint firstItem="EY2-iF-wEN" firstAttribute="top" secondItem="ZyE-zo-LZX" secondAttribute="bottom" constant="8" id="s79-hL-A3H"/>
                                     <constraint firstItem="EY2-iF-wEN" firstAttribute="leading" secondItem="xzN-eR-4CN" secondAttribute="leading" constant="32" id="vWy-8I-zzX"/>
                                     <constraint firstAttribute="trailing" secondItem="EY2-iF-wEN" secondAttribute="trailing" constant="32" id="zAU-po-K1w"/>
                                 </constraints>

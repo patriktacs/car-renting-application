@@ -9,17 +9,26 @@
 import Foundation
 import RxSwift
 import RxCocoa
+import Moya
 
 protocol RentingInteractor {
     
     var ownRentsRefreshRelay: BehaviorRelay<Void> { get }
     var ownRents: Observable<[Rent]> { get }
+    
+    var currentRent: Rent { get set }
+    
+    func startRent() -> Single<Response>
+    func cancelRent() -> Single<Response>
+    func stopRent() -> Single<Response>
 }
 
 class RentsInteractor: RentingInteractor {
     
     var ownRentsRefreshRelay = BehaviorRelay<Void>(value: ())
     var ownRents: Observable<[Rent]>
+    
+    var currentRent = Rent()
     
     var sessionManager: SessioningManager!
     var networkManager: NetworkingManager!
@@ -31,5 +40,20 @@ class RentsInteractor: RentingInteractor {
         self.ownRents = ownRentsRefreshRelay.flatMapLatest({ _ -> Single<[Rent]> in
             return networkManager.provider.requestDecoded(RentsAPI.getRents(token: sessionManager.token))
         }).share(replay: 1, scope: .forever)
+    }
+    
+    func startRent() -> Single<Response> {
+        return self.networkManager.provider.rx.request(MultiTarget(RentsAPI.postStartRent(token: sessionManager.token, rentId: String(currentRent.rentId ?? 0))))
+        .filterSuccessfulStatusCodes()
+    }
+    
+    func cancelRent() -> Single<Response> {
+        return self.networkManager.provider.rx.request(MultiTarget(RentsAPI.postCancelRent(token: sessionManager.token, rentId: String(currentRent.rentId ?? 0))))
+        .filterSuccessfulStatusCodes()
+    }
+    
+    func stopRent() -> Single<Response> {
+        return self.networkManager.provider.rx.request(MultiTarget(RentsAPI.postStopRent(token: sessionManager.token, rentId: String(currentRent.rentId ?? 0))))
+        .filterSuccessfulStatusCodes()
     }
 }

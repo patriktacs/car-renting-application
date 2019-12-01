@@ -21,7 +21,7 @@ class OwnRentsTableViewCell: UITableViewCell {
     
     func setupData(_ data: OwnRentsTableViewCellItemViewModel) {
         statusImageView.image = UIImage(named: data.status?.lowercased() ?? "unknown")
-        carLabel.text = "Station: " + String(data.startStationId)
+        carLabel.text = "Station: " + data.startStationName
         timeLabel.text = data.startTime + " - " + data.endTime
         
         self.selectionStyle = .none

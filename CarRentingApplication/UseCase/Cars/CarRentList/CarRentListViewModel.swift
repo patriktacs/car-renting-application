@@ -36,9 +36,7 @@ class CarRentListViewModel: CarRentListViewModelType {
                 var itemViewModels: [RentsTableViewCellItemViewModel] = []
 
                 for rent in rents {
-                    if rent.state == "RESERVED" {
-                        itemViewModels.append(RentsTableViewCellItemViewModel(rent: rent))
-                    }
+                    itemViewModels.append(RentsTableViewCellItemViewModel(rent: rent))
                 }
                 
                 return itemViewModels

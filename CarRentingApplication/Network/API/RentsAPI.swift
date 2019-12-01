@@ -11,6 +11,9 @@ import Moya
 
 enum RentsAPI {
     case getRents(token: String)
+    case postStartRent(token: String, rentId: String)
+    case postCancelRent(token: String, rentId: String)
+    case postStopRent(token: String, rentId: String)
 }
 
 extension RentsAPI: TargetType {
@@ -22,6 +25,12 @@ extension RentsAPI: TargetType {
         switch self {
         case .getRents:
             return "/rents"
+        case .postStartRent(token: _, let rentId):
+            return "/rents/" + rentId + "/start"
+        case .postCancelRent(token: _, let rentId):
+            return "/rents/" + rentId + "/cancel"
+        case .postStopRent(token: _, let rentId):
+            return "/rents/" + rentId + "/stop"
         }
     }
     
@@ -29,6 +38,8 @@ extension RentsAPI: TargetType {
         switch self {
         case .getRents:
             return .get
+        case .postStartRent, .postCancelRent, .postStopRent:
+            return .post
         }
     }
     
@@ -43,6 +54,8 @@ extension RentsAPI: TargetType {
     var headers: [String : String]? {
         switch self {
         case .getRents(let token):
+            return ["Authorization": "Basic " + token]
+        case .postStartRent(let token, rentId: _), .postCancelRent(let token, rentId: _), .postStopRent(let token, rentId: _):
             return ["Authorization": "Basic " + token]
         }
     }
