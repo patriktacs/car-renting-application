@@ -66,7 +66,9 @@ class OwnRentDetailsViewController: UIViewController, Notifiable {
     }
     
     @IBAction func mainActionButton(_ sender: Any) {
-        if self.isStarted {
+        if viewModel.startDate > Date() {
+            self.showNotification("Rent error", "You can't start your rent earlier than expected.")
+        } else if self.isStarted {
             self.viewModel.stopRent().subscribe(onSuccess: { _ in
                 self.viewModel.setRentStatusToStopped()
                 self.viewModel.dataRefreshRelay.accept(())

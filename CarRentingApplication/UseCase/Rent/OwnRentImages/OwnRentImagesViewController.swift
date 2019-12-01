@@ -27,6 +27,10 @@ class OwnRentImagesViewController: UIViewController {
         }.disposed(by: rx.disposeBag)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationItem.title = "Rent images"
+    }
+    
     func setupCell() {
         let cellNib = UINib(nibName: "RentImagesTableViewCell", bundle: nil)
         self.imagesTableView.register(cellNib, forCellReuseIdentifier: "RentImagesTableViewCell")
