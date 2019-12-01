@@ -326,6 +326,36 @@
             </objects>
             <point key="canvasLocation" x="1922" y="779"/>
         </scene>
+        <!--Own Rent Images View Controller-->
+        <scene sceneID="vkh-fd-qZc">
+            <objects>
+                <viewController storyboardIdentifier="OwnRentImages" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LbO-gA-irm" customClass="OwnRentImagesViewController" customModule="CarRentingApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ahb-Dy-usS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fEf-Ja-6V3">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="fEf-Ja-6V3" firstAttribute="leading" secondItem="UO0-ZF-hOF" secondAttribute="leading" id="B47-yN-hkk"/>
+                            <constraint firstItem="fEf-Ja-6V3" firstAttribute="top" secondItem="UO0-ZF-hOF" secondAttribute="top" id="Djp-Vb-WdP"/>
+                            <constraint firstItem="UO0-ZF-hOF" firstAttribute="trailing" secondItem="fEf-Ja-6V3" secondAttribute="trailing" id="Svh-1z-XRn"/>
+                            <constraint firstAttribute="bottom" secondItem="fEf-Ja-6V3" secondAttribute="bottom" id="X73-Uw-plL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UO0-ZF-hOF"/>
+                    </view>
+                    <connections>
+                        <outlet property="imagesTableView" destination="fEf-Ja-6V3" id="4eq-Ph-ueK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WCy-WG-4V1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2758" y="779"/>
+        </scene>
         <!--Car Details View Controller-->
         <scene sceneID="nA4-5a-x1r">
             <objects>

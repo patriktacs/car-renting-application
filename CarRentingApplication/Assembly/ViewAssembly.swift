@@ -87,5 +87,10 @@ class ViewAssembly: Assembly {
         container.storyboardInitCompleted(OwnRentImageUploadViewController.self, initCompleted: { r,c in
             c.viewModel = r.resolve(OwnRentImageUploadViewModelType.self)!
         })
+        
+        container.autoregister(OwnRentImagesViewModelType.self, initializer: OwnRentImagesViewModel.init)
+        container.storyboardInitCompleted(OwnRentImagesViewController.self, initCompleted: { r,c in
+            c.viewModel = r.resolve(OwnRentImagesViewModelType.self)!
+        })
     }
 }
