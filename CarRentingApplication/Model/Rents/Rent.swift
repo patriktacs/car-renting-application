@@ -14,7 +14,9 @@ struct Rent: Codable {
     var plannedStartTime: String?
     var plannedEndTime: String?
     var startStationId: Int?
+    var startStationName: String?
     var endStationId: Int?
+    var endStationName: String?
     var actualStartTime: String?
     var actualEndTime: String?
     var state: String?

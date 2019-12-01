@@ -19,8 +19,8 @@ class RentsTableViewCell: UITableViewCell {
     }
     
     func setupData(rent: RentsTableViewCellItemViewModel) {
-        self.departureLabel.text = "Departure: " + String(rent.startStationId)
-        self.arrivalLabel.text = "Arrival: " + String(rent.endStationId)
+        self.departureLabel.text = "Departure: " + rent.startStationName
+        self.arrivalLabel.text = "Arrival: " + rent.endStationName
         self.intervalLabel.text = rent.plannedStartTime + " - " + rent.plannedEndTime
         
         if rent.isMine {

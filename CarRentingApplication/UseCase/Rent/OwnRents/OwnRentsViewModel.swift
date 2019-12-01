@@ -15,7 +15,10 @@ protocol OwnRentsViewModelType {
     var ownRentsRefreshRelay: BehaviorRelay<Void> { get }
     var ownRentItems: Observable<[OwnRentsTableViewCellItemViewModel]> { get }
     
+    var rents: Observable<[Rent]> { get }
+    
     func logout()
+    func setCurrentRent(rent: Rent)
 }
 
 class OwnRentsViewModel: OwnRentsViewModelType {
@@ -24,6 +27,10 @@ class OwnRentsViewModel: OwnRentsViewModelType {
         return rentsInteractor.ownRentsRefreshRelay
     }
     var ownRentItems: Observable<[OwnRentsTableViewCellItemViewModel]>
+    
+    var rents: Observable<[Rent]> {
+        return rentsInteractor.ownRents
+    }
     
     var rentsInteractor: RentingInteractor!
     var sessionManager: SessioningManager!
@@ -46,5 +53,9 @@ class OwnRentsViewModel: OwnRentsViewModelType {
     
     func logout() {
         self.sessionManager.killSession()
+    }
+    
+    func setCurrentRent(rent: Rent) {
+        rentsInteractor.currentRent = rent
     }
 }

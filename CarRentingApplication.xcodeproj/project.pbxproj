@@ -29,6 +29,9 @@
 		DB8173F2238B23EC00CC2B99 /* OwnRentsTableViewCellItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8173F1238B23EC00CC2B99 /* OwnRentsTableViewCellItemViewModel.swift */; };
 		DB8173F4238B268B00CC2B99 /* RentsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8173F3238B268B00CC2B99 /* RentsAPI.swift */; };
 		DB9B128C235D00FE005F8F0A /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB9B128B235D00FE005F8F0A /* Dashboard.storyboard */; };
+		DBA431DE2393081800588B88 /* OwnRentDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA431DD2393081800588B88 /* OwnRentDetailsViewController.swift */; };
+		DBA431E02393A47000588B88 /* OwnRentDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA431DF2393A47000588B88 /* OwnRentDetailsViewModel.swift */; };
+		DBA431E22393A95B00588B88 /* RentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA431E12393A95B00588B88 /* RentData.swift */; };
 		DBB7C8AE23535DF900DEBBB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB7C8AD23535DF900DEBBB3 /* AppDelegate.swift */; };
 		DBB7C8B523535E0400DEBBB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBB7C8B423535E0400DEBBB3 /* Assets.xcassets */; };
 		DBB7C8B823535E0400DEBBB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBB7C8B623535E0400DEBBB3 /* LaunchScreen.storyboard */; };
@@ -121,6 +124,9 @@
 		DB8173F1238B23EC00CC2B99 /* OwnRentsTableViewCellItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnRentsTableViewCellItemViewModel.swift; sourceTree = "<group>"; };
 		DB8173F3238B268B00CC2B99 /* RentsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentsAPI.swift; sourceTree = "<group>"; };
 		DB9B128B235D00FE005F8F0A /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
+		DBA431DD2393081800588B88 /* OwnRentDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnRentDetailsViewController.swift; sourceTree = "<group>"; };
+		DBA431DF2393A47000588B88 /* OwnRentDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnRentDetailsViewModel.swift; sourceTree = "<group>"; };
+		DBA431E12393A95B00588B88 /* RentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentData.swift; sourceTree = "<group>"; };
 		DBB7C8AA23535DF900DEBBB3 /* CarRentingApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarRentingApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBB7C8AD23535DF900DEBBB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBB7C8B423535E0400DEBBB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -265,6 +271,7 @@
 		DB346EC5238B183C00F0B55D /* Rent */ = {
 			isa = PBXGroup;
 			children = (
+				DBA431DC2393075D00588B88 /* OwnRentDetails */,
 				DB346EC8238B186200F0B55D /* OwnRents */,
 			);
 			path = Rent;
@@ -315,6 +322,16 @@
 				DB8173F1238B23EC00CC2B99 /* OwnRentsTableViewCellItemViewModel.swift */,
 			);
 			path = OwnRentsTableViewCell;
+			sourceTree = "<group>";
+		};
+		DBA431DC2393075D00588B88 /* OwnRentDetails */ = {
+			isa = PBXGroup;
+			children = (
+				DBA431DD2393081800588B88 /* OwnRentDetailsViewController.swift */,
+				DBA431DF2393A47000588B88 /* OwnRentDetailsViewModel.swift */,
+				DBA431E12393A95B00588B88 /* RentData.swift */,
+			);
+			path = OwnRentDetails;
 			sourceTree = "<group>";
 		};
 		DBB7C8A123535DF900DEBBB3 = {
@@ -868,6 +885,7 @@
 				DBBB82A123782CDC00308A48 /* Station.swift in Sources */,
 				DBE15806236EF3750037B357 /* Button.swift in Sources */,
 				DBE15818236F582D0037B357 /* DrivingLicenseInputDataViewController.swift in Sources */,
+				DBA431DE2393081800588B88 /* OwnRentDetailsViewController.swift in Sources */,
 				DBBB82AE237836BF00308A48 /* CarsTableViewCell.swift in Sources */,
 				DBBB829F23782C4000308A48 /* Car.swift in Sources */,
 				DB346EBF238AC3E400F0B55D /* RentCarViewController.swift in Sources */,
@@ -876,6 +894,7 @@
 				DBE15817236F582D0037B357 /* DrivingLicenseInputDataViewModel.swift in Sources */,
 				DBD8C1C823632A6E00902426 /* AccountDataInputViewController.swift in Sources */,
 				DBE15822236F5AED0037B357 /* DrivingLicenseFrontUploadViewModel.swift in Sources */,
+				DBA431E22393A95B00588B88 /* RentData.swift in Sources */,
 				DBE1581C236F58DE0037B357 /* DrivingLicenseBackUploadViewController.swift in Sources */,
 				DBE15824236F5D880037B357 /* UIViewController.swift in Sources */,
 				DBB7C8AE23535DF900DEBBB3 /* AppDelegate.swift in Sources */,
@@ -901,6 +920,7 @@
 				DB346EC1238AC45D00F0B55D /* RentCarViewModel.swift in Sources */,
 				DB8173F4238B268B00CC2B99 /* RentsAPI.swift in Sources */,
 				DB72D935236EED4E0090B85C /* TextField.swift in Sources */,
+				DBA431E02393A47000588B88 /* OwnRentDetailsViewModel.swift in Sources */,
 				DB8173F2238B23EC00CC2B99 /* OwnRentsTableViewCellItemViewModel.swift in Sources */,
 				DBBB82AB2378354700308A48 /* CarsTableViewCellItemViewModel.swift in Sources */,
 				DBDA05AF2359D94F005026DF /* NetworkAssembly.swift in Sources */,

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class OwnRentsViewController: UIViewController {
     
@@ -14,6 +16,8 @@ class OwnRentsViewController: UIViewController {
     @IBOutlet weak var ownRentsTableView: UITableView!
     
     var viewModel: OwnRentsViewModelType!
+    
+    var rents = BehaviorRelay<[Rent]>(value: [])
     
     var pullToRefresh: UIRefreshControl = UIRefreshControl()
 
@@ -24,17 +28,21 @@ class OwnRentsViewController: UIViewController {
         setupCell()
         setupTableView()
         setupPullToRefresh()
+        setupItemSelected()
         
         viewModel.ownRentItems
             .bind(to: ownRentsTableView.rx.items(cellIdentifier: "OwnRentsTableViewCell", cellType: OwnRentsTableViewCell.self)) { (row, element, cell) in
                 cell.setupData(element)
         }.disposed(by: rx.disposeBag)
+        
+        viewModel.rents.bind(to: rents).disposed(by: rx.disposeBag)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         self.navigationItem.title = "My Rents"
+        
+        self.viewModel.ownRentsRefreshRelay.accept(())
     }
     
     func setupLogout() {
@@ -74,6 +82,17 @@ class OwnRentsViewController: UIViewController {
                 guard let self = self else { return }
                 self.pullToRefresh.endRefreshing()
             }).disposed(by: rx.disposeBag)
+    }
+    
+    func setupItemSelected() {
+        self.ownRentsTableView.rx.itemSelected.subscribe(onNext: { indexPath in
+            let selectedRent = self.rents.value[indexPath.row]
+            self.viewModel.setCurrentRent(rent: selectedRent)
+            
+            let dashboardStoryboard = UIStoryboard(name: "Dashboard", bundle: nil)
+            let carDetailsViewController = dashboardStoryboard.instantiateViewController(withIdentifier: "OwnRentDetails")
+            self.navigationController?.pushViewController(carDetailsViewController, animated: true)
+        }).disposed(by: rx.disposeBag)
     }
 }
 
