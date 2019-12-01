@@ -284,6 +284,48 @@
             </objects>
             <point key="canvasLocation" x="926" y="779"/>
         </scene>
+        <!--Own Rent Image Upload View Controller-->
+        <scene sceneID="OX1-5q-nLJ">
+            <objects>
+                <viewController storyboardIdentifier="OwnRentImageUpload" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lGk-EK-S26" customClass="OwnRentImageUploadViewController" customModule="CarRentingApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2dV-gM-Nsb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ef-xg-1IC" customClass="Button" customModule="CarRentingApplication" customModuleProvider="target">
+                                <rect key="frame" x="32" y="788" width="350" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="uploadAction:" destination="lGk-EK-S26" eventType="touchUpInside" id="lnc-rB-k8c"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5O3-fR-DE8">
+                                <rect key="frame" x="16" y="298" width="382" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="7D5-Kb-tyw"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="5O3-fR-DE8" firstAttribute="centerY" secondItem="2dV-gM-Nsb" secondAttribute="centerY" id="EMV-1Z-6xi"/>
+                            <constraint firstItem="5O3-fR-DE8" firstAttribute="leading" secondItem="oiF-Ug-0DT" secondAttribute="leading" constant="16" id="R3z-tb-Z2L"/>
+                            <constraint firstItem="oiF-Ug-0DT" firstAttribute="bottom" secondItem="0ef-xg-1IC" secondAttribute="bottom" constant="44" id="Y06-qc-h5m"/>
+                            <constraint firstItem="oiF-Ug-0DT" firstAttribute="trailing" secondItem="5O3-fR-DE8" secondAttribute="trailing" constant="16" id="fXO-RH-Hnh"/>
+                            <constraint firstItem="0ef-xg-1IC" firstAttribute="leading" secondItem="oiF-Ug-0DT" secondAttribute="leading" constant="32" id="kJG-WI-Pjg"/>
+                            <constraint firstItem="oiF-Ug-0DT" firstAttribute="trailing" secondItem="0ef-xg-1IC" secondAttribute="trailing" constant="32" id="q9l-SK-mck"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oiF-Ug-0DT"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="5O3-fR-DE8" id="Flz-MC-d5J"/>
+                        <outlet property="uploadButton" destination="0ef-xg-1IC" id="GpV-A9-DBI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zLp-h9-yZd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1922" y="779"/>
+        </scene>
         <!--Car Details View Controller-->
         <scene sceneID="nA4-5a-x1r">
             <objects>
