@@ -24,6 +24,11 @@ protocol RentingInteractor {
     func startRent() -> Single<Response>
     func cancelRent() -> Single<Response>
     func stopRent() -> Single<Response>
+    
+    func setImage(image: UIImage)
+    
+    func uploadBefore() -> Single<Response>
+    func uploadAfter() -> Single<Response>
 }
 
 class RentsInteractor: RentingInteractor {
@@ -35,6 +40,8 @@ class RentsInteractor: RentingInteractor {
     var rents: Observable<[Rent]>
     
     var currentRent = Rent()
+    
+    var uploadableImage: UIImage!
     
     var sessionManager: SessioningManager!
     var networkManager: NetworkingManager!
@@ -64,6 +71,20 @@ class RentsInteractor: RentingInteractor {
     
     func stopRent() -> Single<Response> {
         return self.networkManager.provider.rx.request(MultiTarget(RentsAPI.postStopRent(token: sessionManager.token, rentId: String(currentRent.rentId ?? 0))))
+        .filterSuccessfulStatusCodes()
+    }
+    
+    func setImage(image: UIImage) {
+        self.uploadableImage = image
+    }
+    
+    func uploadBefore() -> Single<Response> {
+        return self.networkManager.provider.rx.request(MultiTarget(RentsAPI.postBeforeImage(token: sessionManager.token, image: uploadableImage, rentId: String(currentRent.rentId ?? 0))))
+        .filterSuccessfulStatusCodes()
+    }
+    
+    func uploadAfter() -> Single<Response> {
+        return self.networkManager.provider.rx.request(MultiTarget(RentsAPI.postAfterImage(token: sessionManager.token, image: uploadableImage, rentId: String(currentRent.rentId ?? 0))))
         .filterSuccessfulStatusCodes()
     }
 }

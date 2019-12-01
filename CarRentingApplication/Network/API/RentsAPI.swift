@@ -14,6 +14,9 @@ enum RentsAPI {
     case postStartRent(token: String, rentId: String)
     case postCancelRent(token: String, rentId: String)
     case postStopRent(token: String, rentId: String)
+    case postBeforeImage(token: String, image: UIImage, rentId: String)
+    case postAfterImage(token: String, image: UIImage, rentId: String)
+    case getImage(token: String, imageId: String)
 }
 
 extension RentsAPI: TargetType {
@@ -31,14 +34,20 @@ extension RentsAPI: TargetType {
             return "/rents/" + rentId + "/cancel"
         case .postStopRent(token: _, let rentId):
             return "/rents/" + rentId + "/stop"
+        case .postBeforeImage(token: _, image: _, let rentId):
+            return "/rents/" + rentId + "/image/before"
+        case .postAfterImage(token: _, image: _, let rentId):
+            return "/rents/" + rentId + "/image/after"
+        case .getImage(token: _, let imageId):
+            return "image/" + imageId
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .getRents:
+        case .getRents, .getImage:
             return .get
-        case .postStartRent, .postCancelRent, .postStopRent:
+        case .postStartRent, .postCancelRent, .postStopRent, .postAfterImage, .postBeforeImage:
             return .post
         }
     }
@@ -48,14 +57,27 @@ extension RentsAPI: TargetType {
     }
     
     var task: Task {
-        return .requestPlain
+        switch self {
+        case .postBeforeImage(token: _, let image, let rentId):
+            let imageData = image.jpegData(compressionQuality: 0.01) ?? Data()
+            let multiImage = MultipartFormData(provider: .data(imageData), name: "image", fileName: rentId + "uploaded-image.jpeg", mimeType: "image/jpeg")
+            
+            return .uploadMultipart([multiImage])
+        case .postAfterImage(token: _, let image, let rentId):
+            let imageData = image.jpegData(compressionQuality: 0.01) ?? Data()
+            let multiImage = MultipartFormData(provider: .data(imageData), name: "image", fileName: rentId + "uploaded-image.jpeg", mimeType: "image/jpeg")
+            
+            return .uploadMultipart([multiImage])
+        default:
+            return .requestPlain
+        }
     }
     
     var headers: [String : String]? {
         switch self {
-        case .getRents(let token):
+        case .getRents(let token), .getImage(let token, imageId: _):
             return ["Authorization": "Basic " + token]
-        case .postStartRent(let token, rentId: _), .postCancelRent(let token, rentId: _), .postStopRent(let token, rentId: _):
+        case .postStartRent(let token, rentId: _), .postCancelRent(let token, rentId: _), .postStopRent(let token, rentId: _), .postBeforeImage(let token, image: _, rentId: _), .postAfterImage(let token, image: _, rentId: _):
             return ["Authorization": "Basic " + token]
         }
     }

@@ -82,5 +82,15 @@ class ViewAssembly: Assembly {
         container.storyboardInitCompleted(PositionProviderViewController.self, initCompleted: { r,c in
             c.viewModel = r.resolve(PositionProviderViewModelType.self)!
         })
+        
+        container.autoregister(OwnRentImageUploadViewModelType.self, initializer: OwnRentImageUploadViewModel.init)
+        container.storyboardInitCompleted(OwnRentImageUploadViewController.self, initCompleted: { r,c in
+            c.viewModel = r.resolve(OwnRentImageUploadViewModelType.self)!
+        })
+        
+        container.autoregister(OwnRentImagesViewModelType.self, initializer: OwnRentImagesViewModel.init)
+        container.storyboardInitCompleted(OwnRentImagesViewController.self, initCompleted: { r,c in
+            c.viewModel = r.resolve(OwnRentImagesViewModelType.self)!
+        })
     }
 }

@@ -137,14 +137,14 @@ class OwnRentDetailsViewController: UIViewController, Notifiable {
     }
     
     @objc func images(sender: UIBarButtonItem) {
-//        let dashboardStoryboard = UIStoryboard(name: "Dashboard", bundle: nil)
-//        let rentCarViewController = dashboardStoryboard.instantiateViewController(withIdentifier: "RentCar")
-//        self.navigationController?.pushViewController(rentCarViewController, animated: true)
+        let dashboardStoryboard = UIStoryboard(name: "Dashboard", bundle: nil)
+        let imagesViewController = dashboardStoryboard.instantiateViewController(withIdentifier: "OwnRentImages")
+        self.navigationController?.pushViewController(imagesViewController, animated: true)
     }
     
     @objc func addImage(sender: UIBarButtonItem) {
-//        let dashboardStoryboard = UIStoryboard(name: "Dashboard", bundle: nil)
-//        let rentCarViewController = dashboardStoryboard.instantiateViewController(withIdentifier: "RentCar")
-//        self.navigationController?.pushViewController(rentCarViewController, animated: true)
+        let dashboardStoryboard = UIStoryboard(name: "Dashboard", bundle: nil)
+        let rentCarViewController = dashboardStoryboard.instantiateViewController(withIdentifier: "OwnRentImageUpload")
+        self.navigationController?.pushViewController(rentCarViewController, animated: true)
     }
 }
