@@ -16,6 +16,9 @@ protocol RentingInteractor {
     var ownRentsRefreshRelay: BehaviorRelay<Void> { get }
     var ownRents: Observable<[Rent]> { get }
     
+    var rentsRefreshRelay: PublishRelay<Void> { get }
+    var rents: Observable<[Rent]> { get }
+    
     var currentRent: Rent { get set }
     
     func startRent() -> Single<Response>
@@ -28,6 +31,9 @@ class RentsInteractor: RentingInteractor {
     var ownRentsRefreshRelay = BehaviorRelay<Void>(value: ())
     var ownRents: Observable<[Rent]>
     
+    var rentsRefreshRelay = PublishRelay<Void>()
+    var rents: Observable<[Rent]>
+    
     var currentRent = Rent()
     
     var sessionManager: SessioningManager!
@@ -38,6 +44,10 @@ class RentsInteractor: RentingInteractor {
         self.sessionManager = sessionManager
         
         self.ownRents = ownRentsRefreshRelay.flatMapLatest({ _ -> Single<[Rent]> in
+            return networkManager.provider.requestDecoded(RentsAPI.getRents(token: sessionManager.token))
+        }).share(replay: 1, scope: .forever)
+        
+        self.rents = rentsRefreshRelay.flatMapLatest({ _ -> Single<[Rent]> in
             return networkManager.provider.requestDecoded(RentsAPI.getRents(token: sessionManager.token))
         }).share(replay: 1, scope: .forever)
     }

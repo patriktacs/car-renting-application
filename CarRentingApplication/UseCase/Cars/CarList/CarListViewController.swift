@@ -35,11 +35,20 @@ class CarListViewController: UIViewController, UITabBarControllerDelegate {
         }.disposed(by: rx.disposeBag)
         
         viewModel.cars.bind(to: cars).disposed(by: rx.disposeBag)
+        
+        viewModel.isLocationNeeded.subscribe(onNext: { needed in
+            if needed {
+                let dashboardStoryboard = UIStoryboard(name: "Dashboard", bundle: nil)
+                let positionProviderViewController = dashboardStoryboard.instantiateViewController(withIdentifier: "PositionProvider")
+                self.navigationController?.pushViewController(positionProviderViewController, animated: true)
+            }
+        }).disposed(by: rx.disposeBag)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationItem.title = "Cars"
         self.viewModel.carsRefreshRelay.accept(())
+        self.viewModel.iLNRelay.accept(())
     }
     
     func setupLogout() {

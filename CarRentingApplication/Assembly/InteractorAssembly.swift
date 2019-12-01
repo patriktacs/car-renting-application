@@ -15,5 +15,6 @@ class InteractorAssembly: Assembly {
         container.autoregister(RegistratingInteractor.self, initializer: RegisterInteractor.init).inObjectScope(.container)
         container.autoregister(CarInteractor.self, initializer: CarsInteractor.init).inObjectScope(.container)
         container.autoregister(RentingInteractor.self, initializer: RentsInteractor.init).inObjectScope(.container)
+        container.autoregister(PositioningInteractor.self, initializer: PositionInteractor.init).inObjectScope(.container)
     }
 }

@@ -23,4 +23,5 @@ struct Rent: Codable {
     var mine: Bool?
     var imageIdsBefore: [Int]?
     var imageIdsAfter: [Int]?
+    var positionReportRequested: Bool?
 }

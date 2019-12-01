@@ -77,5 +77,10 @@ class ViewAssembly: Assembly {
         container.storyboardInitCompleted(OwnRentDetailsViewController.self, initCompleted: { r,c in
             c.viewModel = r.resolve(OwnRentDetailsViewModelType.self)!
         })
+        
+        container.autoregister(PositionProviderViewModelType.self, initializer: PositionProviderViewModel.init)
+        container.storyboardInitCompleted(PositionProviderViewController.self, initCompleted: { r,c in
+            c.viewModel = r.resolve(PositionProviderViewModelType.self)!
+        })
     }
 }
