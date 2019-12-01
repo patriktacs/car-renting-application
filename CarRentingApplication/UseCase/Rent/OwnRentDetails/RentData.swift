@@ -32,7 +32,7 @@ struct RentData {
         dateFormatterPrint.dateFormat = "yyyy MMM dd"
         
         self.rentStatus = rent.state?.lowercased() ?? "unknown"
-        self.carId = String(rent.carId ?? 0)
+        self.carId = (rent.carBrand ?? "") + " " + (rent.carModel ?? "")
         self.startDate = (rent.actualStartTime?.isEmpty ?? true) ? dateFormatterPrint.string(from: dateFormatterGet.date(from: rent.plannedStartTime ?? "") ?? Date()) : dateFormatterPrint.string(from: dateFormatterGet.date(from: rent.actualStartTime ?? "") ?? Date())
         self.endDate = (rent.actualEndTime?.isEmpty ?? true) ? dateFormatterPrint.string(from: dateFormatterGet.date(from: rent.plannedEndTime ?? "") ?? Date()) : dateFormatterPrint.string(from: dateFormatterGet.date(from: rent.actualEndTime ?? "") ?? Date())
         self.startStationName = rent.startStationName ?? ""

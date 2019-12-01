@@ -11,6 +11,8 @@ import Foundation
 struct Rent: Codable {
     var rentId: Int?
     var carId: Int?
+    var carBrand: String?
+    var carModel: String?
     var plannedStartTime: String?
     var plannedEndTime: String?
     var startStationId: Int?
